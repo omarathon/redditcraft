@@ -1,0 +1,19 @@
+name: RedditCraft
+version: ${project.version}
+main: dev.omarathon.redditcraft.RedditCraft
+api-version: 1.13
+authors: [omarathon]
+commands:
+  redditcraft:
+    description: Main command for the RedditCraft plugin.
+    usage: /redditcraft of /rc. Use /redditcraft help or /rc help for help.
+    permission: redditcraft
+    aliases: [rc]
+
+depend:
+  - RedditAPI
+
+softdepend: [PlaceholderAPI]
+
+
+
