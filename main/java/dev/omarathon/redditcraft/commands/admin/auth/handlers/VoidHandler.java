@@ -6,6 +6,7 @@ import dev.omarathon.redditcraft.data.endpoints.AuthStatus;
 import dev.omarathon.redditcraft.helper.Error;
 import dev.omarathon.redditcraft.helper.Messaging;
 import dev.omarathon.redditcraft.subreddit.flair.manager.FlairManager;
+import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 

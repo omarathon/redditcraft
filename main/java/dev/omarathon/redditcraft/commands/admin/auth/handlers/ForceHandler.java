@@ -8,10 +8,12 @@ import dev.omarathon.redditcraft.helper.Error;
 import dev.omarathon.redditcraft.helper.Messaging;
 import dev.omarathon.redditcraft.helper.RedditHelper;
 import dev.omarathon.redditcraft.reddit.Reddit;
+import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 
+import java.util.List;
 import java.util.UUID;
 
 public class ForceHandler extends Handler {
@@ -28,7 +30,7 @@ public class ForceHandler extends Handler {
             warnIncorrectUsage(sender);
             return;
         }
-        UUID uuid = null;
+        UUID uuid;
         try {
             uuid = UUID.fromString(args[0]);
         }
@@ -52,9 +54,15 @@ public class ForceHandler extends Handler {
             Messaging.sendPrefixedMessage(sender, "&cReddit user with provided username doesn't exist!");
             return;
         }
+
         try {
+            List<UUID> results = endpointEngine.getAuthenticatedUuidsWithRedditUsername(redditUsername);
+            if (!results.isEmpty() && !((results.size() == 1 && results.get(0).equals(uuid)))) {
+                Messaging.sendPrefixedMessage(sender, "&cFAILURE: Another player with UUID &e" + results.get(0).toString() + " &chas authenticated the given reddit account! Please void them if you wish to override.");
+                return;
+            }
             if (endpointEngine.existsAccountRecord(uuid)) {
-                Messaging.sendPrefixedMessage(sender, "&e&lWARNING: &ePreviously had an authenticated reddit account with the name of &6" + endpointEngine.getRedditUsername(uuid) + " &e- overwriting!");
+                Messaging.sendPrefixedMessage(sender, "&e&lWARNING: &ePreviously had an associated reddit account with the name of &6" + endpointEngine.getRedditUsername(uuid) + " &e- overwriting!");
                 endpointEngine.updateRedditUsername(uuid, redditUsername);
                 endpointEngine.updateAuthenticatedStatus(uuid, false);
             }
@@ -62,7 +70,13 @@ public class ForceHandler extends Handler {
                 endpointEngine.addNewAccount(uuid, redditUsername, false);
             }
             OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(uuid);
-            VerificationResult verificationResult = verifier.verify(offlinePlayer, redditUsername);
+            VerificationResult verificationResult;
+            try {
+                verificationResult = verifier.verify(offlinePlayer);
+            }
+            catch (Exception e) {
+                verificationResult = VerificationResult.ERROR;
+            }
             verifier.messageVerificationResult(offlinePlayer, verificationResult);
         }
         catch (Exception e) {

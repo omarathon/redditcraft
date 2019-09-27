@@ -47,10 +47,16 @@ public class Verifier {
                         OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(username);
                         UUID uuid = offlinePlayer.getUniqueId();
                         if (offlinePlayer.getName().equals(username)) { // existence check
-                            VerificationResult verificationResult = VerificationResult.ERROR;
+                            VerificationResult verificationResult;
                             try {
                                 if (endpointEngine.getRedditUsername(uuid).equals(message.getAuthor())) {
-                                    verificationResult = verify(offlinePlayer, message.getAuthor());
+                                    if (endpointEngine.getAuthenticatedUuidsWithRedditUsername(message.getAuthor()).isEmpty()) {
+                                        verificationResult = verify(offlinePlayer);
+                                    }
+                                    else {
+                                        verificationResult = VerificationResult.ALREADY_AUTHENTICATED_PLAYER_EXISTS;
+                                    }
+
                                 } else {
                                     verificationResult = VerificationResult.FAIL;
                                 }
@@ -69,6 +75,10 @@ public class Verifier {
 
                                 case FAIL:
                                     result = "Failed to verify reddit user " + message.getAuthor() + " with minecraft username " + offlinePlayer.getName() + " (UUID: " + uuid.toString() + ")";
+                                    break;
+
+                                case ALREADY_AUTHENTICATED_PLAYER_EXISTS:
+                                    result = "Failed to verify reddit user " + message.getAuthor() + " with minecraft username " + offlinePlayer.getName() + " (UUID: " + uuid.toString() + ")" + " -- already a minecraft player with this authenticated reddit account!";
                                     break;
 
                                 default:
@@ -95,7 +105,7 @@ public class Verifier {
         }
     }
 
-    public VerificationResult verify(OfflinePlayer offlinePlayer, String redditUsername) throws FlairException {
+    public VerificationResult verify(OfflinePlayer offlinePlayer) {
         UUID uuid = offlinePlayer.getUniqueId();
         try {
             endpointEngine.updateAuthenticatedStatus(uuid, true);
@@ -108,7 +118,7 @@ public class Verifier {
             applyFlair(offlinePlayer, settingsConfigSection.getBoolean("flair-on-after-success"));
             return VerificationResult.SUCCESS;
         }
-        catch (FlairException e) {
+        catch (Exception e) {
             Error.handleException(Bukkit.getConsoleSender(), e);
             flairManager.remove(offlinePlayer);
             return VerificationResult.SUCCESS_NO_FLAIR;

@@ -84,10 +84,6 @@ public abstract class FlairManager {
     protected abstract FlairData getFlair(OfflinePlayer offlinePlayer, int charLimit) throws FlairException;
 
     public void remove(@NotNull OfflinePlayer offlinePlayer) throws FlairException {
-        String playerName = offlinePlayer.getName();
-        if (playerName == null) {
-            throw new FlairException(FlairException.Kind.PLAYER_NOT_EXIST);
-        }
         String redditUsername = endpointEngine.getRedditUsername(offlinePlayer.getUniqueId());
         if (redditUsername == null) {
             throw new FlairException(FlairException.Kind.NO_FOUND_REDDIT_USERNAME);

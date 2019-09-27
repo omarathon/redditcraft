@@ -21,7 +21,7 @@ public class Messaging {
         return ambientMessenger;
     }
 
-    // attaches the prefix, and sends the input message to the player
+    // sends the input message to the player
     public static void sendMessage(CommandSender sender, String message) {
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
@@ -36,6 +36,16 @@ public class Messaging {
 
     public static void sendPrefixedMessage(CommandSender sender, String message) {
         sendMessage(sender, addPrefix(message));
+    }
+
+    public static void sendPrefixedMessages(CommandSender sender, String[] messages) {
+        boolean first = true;
+        for (String message : messages) {
+            if (first) sendPrefixedMessage(sender, message);
+            else sendMessage(sender, message);
+            first = false;
+        }
+
     }
 
     public static String addPrefix(String message) {

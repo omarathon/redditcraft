@@ -4,6 +4,7 @@ public enum VerificationResult {
     SUCCESS ("success"),
     FAIL ("failure"),
     SUCCESS_NO_FLAIR ("success-but-flair-failed"),
+    ALREADY_AUTHENTICATED_PLAYER_EXISTS("someone-else-verified"),
     ERROR ("error");
 
     private String configMessageKey;

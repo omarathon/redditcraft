@@ -10,10 +10,9 @@ import dev.omarathon.redditcraft.helper.RedditHelper;
 import dev.omarathon.redditcraft.reddit.Reddit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class BeginHandler extends PlayerOnlyHandler {
     private ConfirmQueue confirmQueue;
@@ -35,7 +34,7 @@ public class BeginHandler extends PlayerOnlyHandler {
             AuthStatus authStatus = endpointEngine.getAuthStatus(uuid);
 
             Messaging.sendPrefixedMessage(player, authStatus.getMessage(false, uuid, endpointEngine));
-            Messaging.sendPrefixedMessage(player, getOnBeginMessage(redditUsername, authStatus));
+            Messaging.sendPrefixedMessage(player, getOnBeginMessage(player.getName(), redditUsername, authStatus));
 
             processAuthStatus(player, authStatus, redditUsername);
         }
@@ -45,14 +44,15 @@ public class BeginHandler extends PlayerOnlyHandler {
         }
     }
 
-    private String getOnBeginMessage(String redditUsername, AuthStatus authStatus) {
+    private String getOnBeginMessage(@NotNull String minecraftUsername, @NotNull String redditUsername, AuthStatus authStatus) {
         ConfigurationSection authSection = Config.getSection("auth");
         Map<String, String> placeholders = new HashMap<>();
         placeholders.put("bot-name", Reddit.getBotUsername());
         placeholders.put("subject", authSection.getConfigurationSection("verification").getString("reddit-message-subject"));
         placeholders.put("username", redditUsername);
         placeholders.put("window", Long.toString(authSection.getConfigurationSection("verification").getLong("cooldown-seconds")));
-        String onBeginMessage = Config.fillPlaceholders(commandMessages.getString("prompt"), placeholders);
+        placeholders.put("minecraft-username", minecraftUsername);
+        String onBeginMessage = Config.fillPlaceholders(commandMessages.getString("prompt").replace("%n", "\n \n"), placeholders);
 
         if (authStatus == AuthStatus.IN_PROGRESS || authStatus == AuthStatus.AUTHENTICATED) {
             placeholders.clear();

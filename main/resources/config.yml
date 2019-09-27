@@ -1,110 +1,189 @@
+# RedditCraft Configuration
+
+# Database Settings
 mysql:
+  # credentials
   host: ""
-  port: 0
-  database: ""
-  table-prefix: "REDDITCRAFT"
+  port: 3306
+  database: "minecraft"
   username: ""
   password: ""
+  # the prefix for the tables in the database the plugin shall use.
+  # such tables are: <table-prefix>$accounts AND <table-prefix>$auth
+  table-prefix: "REDDITCRAFT"
 
+
+# Authentication Settings
 auth:
+  # number of minutes a user has to send their verification reddit mail to the bot
   window-mins: 30
+  # how long a user has to do /rc auth confirm after being prompted to do so from /rc auth begin
   confirmation-window-seconds: 30
+  # how often the garbage collection procedure for expired auth tokens is executed on the database
   garbage-collector-cooldown-hours: 2
 
+  # Verifier Settings
   verification:
+    # how often the inbox of the bot will be checked for verification messages
     cooldown-seconds: 30
+    # the subject of the reddit mail the users send to the bot to verify their account
     reddit-message-subject: "REDDITCRAFT VERIFICATION"
+    # since a user can verify their account while offline, the success or failure message is sent ambiently. if the user logs in within this expiry duration, they will see the result message.
     ambient-messages-expiry-days: 2
-    # whether their flair on the subreddit is to be turned on after successfully having their reddit account verified.
+    # whether players' flairs on the subreddit are to be turned on after successfully having their reddit account verified (if false, their flair is set to off - only their username will show)
     flair-on-after-success: false
 
+
+# Subreddit Settings
 subreddit:
+  # name of your server's subreddit
   name: "YOUR SUBREDDIT"
 
+  # Flair Settings
   flairs:
-    # prefixsync / singlegroups / multiplegroups
+    # the flair mode. can be one of prefixsync, singlegroups or multiplegroups. (it's by default prefixsync, which requires LuckPerms!)
     mode: "prefixsync"
 
-    # flair will be trimmed such that the combination is within the 64 char limit for flairs in prefixsync. in groups the groups will be reduced.
+    # the formatting for the user's flair. available components: <flair>: their "group" as calculated by the flair mode, and <username> which is their corresponding minecraft username.
     format: "<flair> | <username>"
 
-    # config for when a flair is set to off
+    # Flair Off Settings (when their flair is set to off)
     'off':
-      # flair id of no flair
+      # flair id of "off" flair
       id: ""
-      # placeholders: <username> is minecraft username of player with flair off
+      # the formatting of the flairs. placeholders: <username> is corresponding minecraft username of player with flair off
       format: "[<username>]"
 
-    # flair id for the "custom prefix" flairs
+
+    # flair id for the "custom prefix" flairs. ONLY APPLY TO PREFIXSYNC AND MULTIPLEGROUPS FLAIR MODES.
     custom-flairs-id: ""
 
+    # SingleGroups Flair Mode Settings
     singlegroups-config:
-      # for users that don't fit into any of the above groups
+      # the flair groups
+      # EXAMPLE:
+#      flairs:
+#        owner:
+#          id: "e1b7418c-dc26-11e9-92d7-0ed7c307d6ae"
+#          requires-permission: "group.owner"
+#        admin:
+#          id: "a1b7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.admin"
+#        moderator:
+#          id: "e1d7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.moderator"
+#        donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator"
+#        standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard"
+      flairs: {}
+
+        # the priority list for the flairs. highest priority at the top.
+        # EXAMPLE:
+#        flair-priorities:
+#          - "owner"
+#          - "admin"
+#          - "moderator"
+#          - "donator"
+#          - "standard"
+      flair-priorities: []
+
+      # flair id for users that don't fit into any of the specified groups
       default-flair-id: ""
 
       # the flair id for operators, since they satisfy every permission check
       op-flair-id: ""
 
-      # highest priority comes at top, least at bottom
-      flair-priorities: []
-#        - "owner"
-#        - "..."
-
-      flairs: {}
-#        owner:
-#          id: ""
-#          requires-permission: ""
-
+    # MultipleGroups Flair Mode Settings
     multiplegroups-config:
+      # the individual flairs, as in SingleGroups
+      # EXAMPLE:
+#      flairs:
+#        owner:
+#          id: "e1b7418c-dc26-11e9-92d7-0ed7c307d6ae"
+#          requires-permission: "group.owner"
+#        admin:
+#          id: "a1b7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.admin"
+#        moderator:
+#          id: "e1d7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.moderator"
+#        high-donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator.1"
+#        low-donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator.0"
+#        high-standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard.1"
+#        low-standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard.0"
+      flairs: {}
+
+      # the groups, where within you list the priorities of each flair within.
+      # EXAMPLE:
+#      groups:
+#        staff:
+#          - "owner"
+#          - "admin"
+#          - "moderator"
+#        donator:
+#          - "high-donator"
+#          - "low-donator"
+#        standard:
+#          - "high-standard"
+#          - "low-standard
+      groups: {}
+
+      # the priority list for the groups, where the highest prededence comes first
+      # EXAMPLE:
+#      group-priorities:
+#        - "staff"
+#        - "donator"
+#        - "standard"
+      group-priorities: []
+
+
       # the flair id for operators, since they satisfy every permission check
       op-flair-id: ""
 
+      # the delimiter between each flair in each group.
       delimiter: " | "
 
-      flairs: {}
-#        owner:
-#          flair-text: "OWNER"
-#          requires-permission: "group.owner"
-#        zealous:
-#          flair-text: "ZEALOUS"
-#          requires-permission: "group.zealous"
-#        bronze:
-#          flair-text: "BRONZE"
-#          requires-permission: "group.bronze"
 
-      groups: {}
-#        staff:
-#          - "owner"
-#        donor:
-#          - "zealous"
-#        standard:
-#          - "bronze"
-
-      group-priorities: []
-#        - "staff"
-#        - "donor"
-#        - "standard"
-
+# PlaceholderAPI Placeholder Settings
 placeholders:
+  # the %redditcraft_authenticatedredditusername% placeholder
   authenticatedredditusername:
+    # if they have no authenticated reddit account
     none: "NOT-AUTHENTICATED"
+    # if an error occured obtaining their potentially authenticated reddit account
     error: "ERROR"
 
+
+# Messages Settings (you are recommended to leave these alone)
 messages:
   prefix: "&8[&c&lReddit&f&lCraft&8] &f"
 
+  # general multi-purpose messages
   general:
     error: "&cAn error occured executing this command. Please inform the developers."
     incorrect-usage: "&cIncorrect usage!"
     no-permission: "&cNo permission!"
     player-only-command: "&cThis command may only be executed by a player!"
 
+  # authentication multi-purpose messages
   auth:
     verifier:
       success: "&aYour reddit account was successfully authenticated!"
       failure: "&cYour reddit account failed to authenticate. Please try again."
       success-but-flair-failed: "&aYour reddit account was successfully authenticated &c&lbut your flair on the subreddit failed to apply. &ePlease try to update it with &6/rc flair update&e, and if this fails contact the developers."
       error: "&cAn error occured when attempting to authenticate your reddit account. Please try again, and alert the developers if it persists."
+      someone-else-verified: "&cSomeone else verified your given reddit account before you! Please authenticate again with a different account."
 
     status:
       not-existing: "&cYou have never authenticated a reddit account."
@@ -115,11 +194,12 @@ messages:
 
       admin:
         not-existing: "&cThey have never authenticated a reddit account."
-        new: "cThey do not have an authenticated reddit account. Previous unauthenticated reddit account username: &e<username>&a."
+        new: "&cThey do not have an authenticated reddit account. Previous unauthenticated reddit account username: &e<username>&a."
         new-failed: "&cThey have recently failed authenticating a reddit account with username &e<username>&c."
         in-progress: "&cThey have &e<time-left> minutes &cleft to authenticate their reddit account with username &e<username>&c."
         authenticated: "&aThey currently already have an authenticated reddit account with username &e<username>&a!"
 
+  # flair multi-purpose messages
   flair:
     not-authenticated: "&cYour reddit account is not authenticated! In order to access flairs, please authenticate your reddit account."
 
@@ -135,6 +215,7 @@ messages:
         'null': "&cThey have no flair."
         not-existing: "&cThey are not authenticated, and so have no flair. They must authenticate if they wish to show their username and/or group."
 
+  # messages used by each command. note this structure follows the command structure of the plugin.
   commands:
     redditcraft:
       help:
@@ -152,20 +233,15 @@ messages:
              - &6confirm &e- &7confirm an authentication procedure (you will only have to use this if prompted).
         begin:
           prompt: |
-            &c&l» AUTHENTICATION PROCEDURE «
-
-            &ePlease send a &cprivate message &eto the reddit account:
-             » &6&l<bot-name>
-
-            &ewith the following information:
-
-             » &c&lSUBJECT&e: &6<subject>&e
-             » &c&lBODY&e: &6<your Minecraft username>
-
-            &efrom the reddit account:
-
-             » &6&l<username>
-
+            &c&l» AUTHENTICATION PROCEDURE «%n
+            &ePlease go to the following link: &6https://www.reddit.com/message/compose/?to=<bot-name>
+            &eand send a &cprivate message &eto the reddit account:%n
+             &e» &6&l<bot-name>%n
+            &ewith the following information:%n
+             &e» &c&lSUBJECT&e: &6<subject>
+             &e» &c&lBODY&e: &6<minecraft-username>%n
+            &efrom the reddit account:%n
+             &e» &6&l<username>%n
             &eThen, within &c<window> seconds &eyour authentication message will be processed.
           confirm-prompt: '&aDo &e/rc auth confirm &awithin &e<confirm-window> seconds
             &ato confirm your change in reddit username...'
