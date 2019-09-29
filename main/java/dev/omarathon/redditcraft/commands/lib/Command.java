@@ -17,6 +17,9 @@ public class Command {
     private String incorrectUsage;
     private Command parent;
     private LinkedList<String> permission;
+    private String permissionString;
+    private String outerWildcardedPermissionString;
+    private String innerWildcardedPermissionString;
 
     public Command(String formalArg, Command parent) {
         ConfigurationSection messages = Config.getSection("messages.general");
@@ -38,7 +41,14 @@ public class Command {
         else {
             permission = (LinkedList<String>) parent.getPermission().clone();
         }
-        permission.addLast(formalArg);
+        boolean empty = permission.isEmpty();
+        String outer = String.join(".", permission);
+
+        permission.add(formalArg);
+
+        outerWildcardedPermissionString = empty ? "*" : outer + ".*";
+        permissionString = empty ? formalArg : outer + "." + formalArg;
+        innerWildcardedPermissionString = permissionString + ".*";
     }
 
     public void addArg(String arg) {
@@ -64,18 +74,11 @@ public class Command {
     }
 
     public PermissionResult hasPermission(CommandSender sender) {
-        String last = permission.getLast();
-        if (last == null) {
+        if (permissionString.equals("")) {
             return PermissionResult.EMPTY;
         }
-        permission.removeLast();
-        permission.add("*");
-        String wildcardPermission = String.join(".", permission);
-        permission.removeLast();
-        permission.add(last);
-        String permissionString = String.join(".", permission);
 
-        if (sender.hasPermission(wildcardPermission)) {
+        if (sender.hasPermission(innerWildcardedPermissionString) || sender.hasPermission(outerWildcardedPermissionString)) {
             return PermissionResult.WILDCARDED;
         }
 

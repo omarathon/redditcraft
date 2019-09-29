@@ -293,7 +293,7 @@ messages:
              + &6auth &e- &7admin authentication management commands.&e
              + &6flair &e- &7admin flair management commands.&e
              - &6reload &e- &7reload RedditCraft.&e
-             - &6reset &e- &7reset the database data and reload the plugin &c(dangerous!)&e
+             - &6reset &e- &7reset the database data and reload the plugin &c(dangerous!) - &lIMPORTANT NOTE: &cit's is recommended to call &6/rc admin flair remove all &cbefore calling this to remove all the flairs from the subreddit&e
 
         reload:
           begin-prompt: '&cReloading RedditCraft...'
@@ -309,7 +309,7 @@ messages:
                - &6status <minecraft uuid> &e- &7obtain the authentication status of the minecraft player with the given uuid.&e
                - &6void <minecraft uuid> &e- &7void (unauthenticate if authenticated, cancel authentication attempt if in progress) a player's authentication status with the given uuid.&e
                - &6invalidatetokens &e- &7invalidate all in-progress authentication attempts &c(dangerous!)&e
-               - &6resolve <reddit/minecraft> <reddit username/minecraft uuid> &8[all/*]&e - &7resolve the minecraft account authenticated with the given reddit username, or the reddit accounts authenticated with the given minecraft uuid. all/* additional parameter resolves all ASSOCIATED accounts, not just authenticated ones.
+               - &6resolve <reddit/minecraft> <reddit username/minecraft uuid> &8[all/*]&e - &7resolve the minecraft account authenticated with the given reddit username, or the reddit account authenticated with the given minecraft uuid. all/* additional parameter resolves all ASSOCIATED accounts, not just authenticated ones.
           garbagecollector:
             help:
               message: |-

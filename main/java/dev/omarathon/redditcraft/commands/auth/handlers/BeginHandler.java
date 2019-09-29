@@ -19,7 +19,6 @@ public class BeginHandler extends PlayerOnlyHandler {
 
     public BeginHandler(AuthSelector from, ConfirmQueue confirmQueue) {
         super("begin", from);
-        addArg("begin");
         this.confirmQueue = confirmQueue;
     }
 
