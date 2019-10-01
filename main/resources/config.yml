@@ -184,6 +184,7 @@ messages:
       success-but-flair-failed: "&aYour reddit account was successfully authenticated &c&lbut your flair on the subreddit failed to apply. &ePlease try to update it with &6/rc flair update&e, and if this fails contact the developers."
       error: "&cAn error occured when attempting to authenticate your reddit account. Please try again, and alert the developers if it persists."
       someone-else-verified: "&cSomeone else verified your given reddit account before you! Please authenticate again with a different account."
+      token-expired: "&cYour authentication token expired! Use &6/rc auth status &cto see how long your token has to expire, next time!"
 
     status:
       not-existing: "&cYou have never authenticated a reddit account."

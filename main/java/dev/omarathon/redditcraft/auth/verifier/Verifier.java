@@ -51,7 +51,12 @@ public class Verifier {
                             try {
                                 if (endpointEngine.getRedditUsername(uuid).equals(message.getAuthor())) {
                                     if (endpointEngine.getAuthenticatedUuidsWithRedditUsername(message.getAuthor()).isEmpty()) {
-                                        verificationResult = verify(offlinePlayer);
+                                        if (LocalDateTime.now().isBefore(endpointEngine.getAuthExpiry(uuid))) {
+                                            verificationResult = verify(offlinePlayer);
+                                        }
+                                        else {
+                                            verificationResult = VerificationResult.TOKEN_EXPIRED;
+                                        }
                                     }
                                     else {
                                         verificationResult = VerificationResult.ALREADY_AUTHENTICATED_PLAYER_EXISTS;
@@ -79,6 +84,10 @@ public class Verifier {
 
                                 case ALREADY_AUTHENTICATED_PLAYER_EXISTS:
                                     result = "Failed to verify reddit user " + message.getAuthor() + " with minecraft username " + offlinePlayer.getName() + " (UUID: " + uuid.toString() + ")" + " -- already a minecraft player with this authenticated reddit account!";
+                                    break;
+
+                                case TOKEN_EXPIRED:
+                                    result = "Authentication token expired for reddit user " + message.getAuthor() + " with minecraft username " + offlinePlayer.getName() + " (UUID: " + uuid.toString() + ")";
                                     break;
 
                                 default:

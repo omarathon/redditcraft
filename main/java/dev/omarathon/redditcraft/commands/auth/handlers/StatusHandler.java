@@ -14,6 +14,10 @@ public class StatusHandler extends PlayerOnlyHandler {
 
     @Override
     public void handle(Player sender, String[] args) {
+        if (args.length != 0) {
+            warnIncorrectUsage(sender);
+            return;
+        }
         try {
             AuthStatus authStatus = endpointEngine.getAuthStatus(sender.getUniqueId());
             Messaging.sendPrefixedMessage(sender, authStatus.getMessage(false, sender.getUniqueId(), endpointEngine));

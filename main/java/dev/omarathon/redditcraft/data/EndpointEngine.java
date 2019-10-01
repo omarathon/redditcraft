@@ -23,6 +23,7 @@ public class EndpointEngine {
     public EndpointEngine(@NotNull AccountTableDataEngine accountTableDataEngine, @NotNull AuthTableDataEngine authTableDataEngine) {
         this.accountTableDataEngine = accountTableDataEngine;
         this.authTableDataEngine = authTableDataEngine;
+        initFields();
     }
 
     private void initFields() {
