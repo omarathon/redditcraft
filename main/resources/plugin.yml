@@ -10,6 +10,12 @@ commands:
     permission: redditcraft
     aliases: [rc]
 
+  reddit:
+    description: Returns a link to the subreddit associated with the server.
+    usage: /reddit
+    permission: reddit
+    aliases: [redditlink]
+
 depend:
   - RedditAPI
 

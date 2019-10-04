@@ -218,6 +218,9 @@ messages:
 
   # messages used by each command. note this structure follows the command structure of the plugin.
   commands:
+    reddit:
+      message: "&eServer subreddit link: &6<subreddit>"
+
     redditcraft:
       help:
         message: |-

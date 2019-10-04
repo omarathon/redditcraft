@@ -5,6 +5,7 @@ import dev.omarathon.redditapi.RedditAPI;
 import dev.omarathon.redditapi.connect.InitialisingConnectHandler;
 import dev.omarathon.redditcraft.auth.AuthManager;
 import dev.omarathon.redditcraft.commands.MainCommandExecutor;
+import dev.omarathon.redditcraft.commands.RedditCommandExecutor;
 import dev.omarathon.redditcraft.data.EndpointEngine;
 import dev.omarathon.redditcraft.data.engines.presets.sql.SQLAccountTableDataEngine;
 import dev.omarathon.redditcraft.data.engines.presets.sql.SQLAuthTableDataEngine;
@@ -110,6 +111,8 @@ public final class RedditCraft extends JavaPlugin {
 
         // bind main command executor
         getCommand("redditcraft").setExecutor(new MainCommandExecutor(authManager, subredditManager.getFlairManager(), endpointEngine));
+        // bind reddit command executor
+        getCommand("reddit").setExecutor(new RedditCommandExecutor(endpointEngine));
 
         getLogger().info("[SUCCESS] Successfully started RedditCraft!");
     }
