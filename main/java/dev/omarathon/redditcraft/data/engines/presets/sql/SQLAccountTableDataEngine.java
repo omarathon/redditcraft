@@ -28,10 +28,13 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT " + AccountFields.AUTHENTICATED + " FROM " + sql.getAccountTableName() + " WHERE " + AccountFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            Boolean result = null;
             if (resultSet.next()) {
-                return resultSet.getBoolean(AccountFields.AUTHENTICATED);
+                result = resultSet.getBoolean(AccountFields.AUTHENTICATED);
             }
-            return null;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -45,10 +48,13 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT " + AccountFields.REDDIT_USERNAME + " FROM " + sql.getAccountTableName() + " WHERE " + AccountFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            String result = null;
             if (resultSet.next()) {
-                return resultSet.getString(AccountFields.REDDIT_USERNAME);
+                result = resultSet.getString(AccountFields.REDDIT_USERNAME);
             }
-            return null;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -62,12 +68,15 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT " + AccountFields.REDDIT_USERNAME + ", " + AccountFields.AUTHENTICATED + " FROM " + sql.getAccountTableName() + " WHERE " + AccountFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            RedditUsernameAuthenticatedPair result = null;
             if (resultSet.next()) {
                 String redditUsername = resultSet.getString(AccountFields.REDDIT_USERNAME);
                 boolean authenticated = resultSet.getBoolean(AccountFields.AUTHENTICATED);
-                return new RedditUsernameAuthenticatedPair(redditUsername, authenticated);
+                result = new RedditUsernameAuthenticatedPair(redditUsername, authenticated);
             }
-            return null;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -81,10 +90,13 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT " + AccountFields.FLAIR + " FROM " + sql.getAccountTableName() + " WHERE " + AccountFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            Integer result = null;
             if (resultSet.next()) {
-                return resultSet.getInt(AccountFields.FLAIR);
+                result = resultSet.getInt(AccountFields.FLAIR);
             }
-            return null;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -109,6 +121,8 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
                 }
                 uuids.add(uuid);
             }
+            resultSet.close();
+            preparedStatement.close();
             return uuids;
         }
         catch (SQLException e) {
@@ -135,6 +149,8 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
                 }
                 uuids.add(uuid);
             }
+            resultSet.close();
+            preparedStatement.close();
             return uuids;
         }
         catch (SQLException e) {
@@ -160,6 +176,8 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
                 }
                 uuids.add(uuid);
             }
+            resultSet.close();
+            preparedStatement.close();
             return uuids;
         }
         catch (SQLException e) {
@@ -173,10 +191,13 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT 1 FROM " + sql.getAccountTableName() + " WHERE " + AccountFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            boolean result = false;
             if (resultSet.next()) {
-                return true;
+                result = true;
             }
-            return false;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -190,6 +211,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             preparedStatement.setInt(1, value);
             preparedStatement.setString(2, uuid.toString());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -205,6 +227,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             preparedStatement.setBoolean(3, authenticated);
             preparedStatement.setInt(4, flair);
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -218,6 +241,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             preparedStatement.setString(1, newRedditUsername);
             preparedStatement.setString(2, uuid.toString());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -231,6 +255,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
             preparedStatement.setBoolean(1, newAuthenticated);
             preparedStatement.setString(2, uuid.toString());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -242,6 +267,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("CREATE TABLE " + sql.getAccountTableName() + " (" + AccountFields.UUID + " CHAR(36) NOT NULL, " + AccountFields.REDDIT_USERNAME + " VARCHAR(20) NOT NULL, " + AccountFields.AUTHENTICATED + " BOOLEAN NOT NULL, " + AccountFields.FLAIR + " TINYINT NOT NULL, PRIMARY KEY (" + AccountFields.UUID + "))");
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -253,6 +279,7 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DROP TABLE " + sql.getAccountTableName());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -264,10 +291,12 @@ public class SQLAccountTableDataEngine implements AccountTableDataEngine {
         try {
             DatabaseMetaData databaseMetaData = connection.getMetaData();
             ResultSet table = databaseMetaData.getTables(null, null, sql.getAccountTableName(), null);
+            boolean result = false;
             if (table.next()) {
-                return true;
+                result = true;
             }
-            return false;
+            table.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);

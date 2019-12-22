@@ -27,10 +27,13 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT " + AuthFields.EXPIRY_TIME + " FROM " + sql.getAuthTableName() + " WHERE " + AuthFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            LocalDateTime result = null;
             if (resultSet.next()) {
-                return resultSet.getTimestamp(AuthFields.EXPIRY_TIME).toLocalDateTime();
+                result = resultSet.getTimestamp(AuthFields.EXPIRY_TIME).toLocalDateTime();
             }
-            return null;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -43,10 +46,13 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT 1 FROM " + sql.getAuthTableName() + " WHERE " + AuthFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             ResultSet resultSet = preparedStatement.executeQuery();
+            boolean result = false;
             if (resultSet.next()) {
-                return true;
+                result = true;
             }
-            return false;
+            resultSet.close();
+            preparedStatement.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -60,6 +66,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
             preparedStatement.setString(1, uuid.toString());
             preparedStatement.setTimestamp(2, Timestamp.valueOf(expiry));
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -73,6 +80,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
             preparedStatement.setTimestamp(1, Timestamp.valueOf(newExpiry));
             preparedStatement.setString(2, uuid.toString());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -84,6 +92,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM " + sql.getAuthTableName() + " WHERE " + AuthFields.EXPIRY_TIME + " <= CURRENT_TIMESTAMP ");
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -96,6 +105,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
             PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM " + sql.getAuthTableName() + " WHERE " + AuthFields.UUID + "=?");
             preparedStatement.setString(1, uuid.toString());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -107,6 +117,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("TRUNCATE TABLE " + sql.getAuthTableName());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -118,6 +129,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("CREATE TABLE " + sql.getAuthTableName() + " (" + AuthFields.UUID + " CHAR(36) NOT NULL, " + AuthFields.EXPIRY_TIME + " TIMESTAMP NOT NULL, PRIMARY KEY (" + AuthFields.UUID + "), FOREIGN KEY (" + AuthFields.UUID + ") REFERENCES " + sql.getAccountTableName() + "(" + AccountFields.UUID + "))");
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -129,6 +141,7 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("DROP TABLE " + sql.getAuthTableName());
             preparedStatement.execute();
+            preparedStatement.close();
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
@@ -140,10 +153,12 @@ public class SQLAuthTableDataEngine implements AuthTableDataEngine {
         try {
             DatabaseMetaData databaseMetaData = connection.getMetaData();
             ResultSet table = databaseMetaData.getTables(null, null, sql.getAuthTableName(), null);
+            boolean result = false;
             if (table.next()) {
-                return true;
+                result = true;
             }
-            return false;
+            table.close();
+            return result;
         }
         catch (SQLException e) {
             throw new RuntimeException(e);
