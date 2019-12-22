@@ -135,8 +135,15 @@ public final class RedditCraft extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        if (authManager != null) authManager.stopScheduledServices();
         getLogger().warning("Stopping RedditCraft!");
+        if (authManager != null) authManager.stopScheduledServices();
+        try {
+            sql.close();
+        }
+        catch (SQLException e) {
+            getLogger().severe("[ERROR] Failed to close SQLConnection!");
+        }
+        getLogger().warning("Stopped RedditCraft!");
     }
 
     public static RedditCraft getInstance() {

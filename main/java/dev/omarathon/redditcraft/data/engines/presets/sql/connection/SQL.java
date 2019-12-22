@@ -41,4 +41,8 @@ public class SQL {
     public String getAuthTableName() {
         return authTableName;
     }
+
+    public void close() throws SQLException {
+        if (!connection.isClosed()) connection.close();
+    }
 }
