@@ -266,7 +266,7 @@ messages:
             &eFlair help:
              - &6on &e- &7turn on your flair on the subreddit. It will show both your group and your username after updating.&e
              - &6off &e- &7turn off your flair on the subreddit. It will show only your username after updating.&e
-             - &6status &e- &7bbtain your local flair status.&e
+             - &6status &e- &7Obtain your local flair status.&e
              - &6update &e- &7update your flair on the subreddit to that described by your flair status.&e
              - &6remove &e- &7remove your flair from the subreddit. Neither your group nor your username will show. &cYou do not need to update to make this change.
 
