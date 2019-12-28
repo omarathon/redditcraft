@@ -136,13 +136,25 @@ public final class RedditCraft extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         getLogger().warning("Stopping RedditCraft!");
+
+        // disable AmbientMessenger
+        try {
+            Messaging.getAmbientMessenger().disable();
+        }
+        catch (SQLException e) {
+            getLogger().severe("[ERROR] Failed to disable AmbientMessenger!");
+        }
+        // stop auth manager scheduled services
         if (authManager != null) authManager.stopScheduledServices();
+        // close sql connection
         try {
             sql.close();
         }
         catch (SQLException e) {
             getLogger().severe("[ERROR] Failed to close SQLConnection!");
         }
+
+        // done
         getLogger().warning("Stopped RedditCraft!");
     }
 
