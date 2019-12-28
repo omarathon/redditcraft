@@ -4,7 +4,7 @@ RedditCraft Minecraft Server plugin source code.
 
 **Spigot Plugin Link: https://www.spigotmc.org/resources/redditcraft-a-forum-alternative.71607/**
 
---
+-------
 
 RedditCraft is a Minecraft Server plugin that integrates your presence on a Minecraft server to a server-wide subreddit.
 
