@@ -8,7 +8,6 @@ import dev.omarathon.redditcraft.helper.Error;
 import dev.omarathon.redditcraft.helper.Messaging;
 import dev.omarathon.redditcraft.helper.RedditHelper;
 import dev.omarathon.redditcraft.reddit.Reddit;
-import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;

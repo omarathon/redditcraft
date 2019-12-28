@@ -1,7 +1,6 @@
 package dev.omarathon.redditcraft.papi;
 
 import dev.omarathon.redditcraft.RedditCraft;
-import dev.omarathon.redditcraft.data.EndpointEngine;
 import dev.omarathon.redditcraft.data.endpoints.RedditUsernameAuthenticatedPair;
 import dev.omarathon.redditcraft.helper.Config;
 import dev.omarathon.redditcraft.helper.Error;
