@@ -12,6 +12,7 @@ import net.luckperms.api.context.ImmutableContextSet;
 import net.luckperms.api.model.user.User;
 import net.luckperms.api.query.QueryOptions;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
 
 public class PrefixSyncFlairManager extends FlairManager {
     private String flairId;
@@ -21,11 +22,16 @@ public class PrefixSyncFlairManager extends FlairManager {
         flairId = flairsConfigSection.getString("custom-flairs-id");
     }
 
+    // TODO: work with OfflinePlayers
     @Override
-    protected FlairData getFlair(OfflinePlayer offlinePlayer, int charLimit) throws FlairException {
+    protected FlairData getFlair(OfflinePlayer offlinePlayer, int charLimit) throws FlairException { // currently only works with online players!!
+        Player player = offlinePlayer.getPlayer();
+        if (player == null) {
+            throw new FlairException(FlairException.Kind.PLAYER_NOT_ONLINE);
+        }
         String prefix = "";
         if (charLimit > 0) {
-            prefix = obtainPrefix(offlinePlayer).replaceAll("(&[0-9A-Fa-fK-Ok-oRr])*", "");
+            prefix = obtainPrefix(player).replaceAll("(&[0-9A-Fa-fK-Ok-oRr])*", "");
             int length = prefix.length();
             if (length > charLimit) {
                 prefix = prefix.substring(0, charLimit);
@@ -34,19 +40,13 @@ public class PrefixSyncFlairManager extends FlairManager {
         return new FlairData(flairId, prefix);
     }
 
-    private String obtainPrefix(OfflinePlayer offlinePlayer) throws FlairException {
+    private String obtainPrefix(Player player) throws FlairException {
         LuckPerms api = LuckPermsProvider.get();
-        if (!api.getStorage().loadUser(offlinePlayer.getUniqueId()).join()) { // TODO: fix obtaining offline users
-            // got an error whilst loading the user
-            throw new FlairException(FlairException.Kind.PLAYER_LOAD_ERROR);
-        }
-        User user = api.getUserManager().getUser(offlinePlayer.getUniqueId());
+        User user = api.getUserManager().getUser(player.getUniqueId());
         if (user == null) {
             throw new FlairException(FlairException.Kind.PLAYER_LOAD_ERROR);
         }
-
         ContextManager cm = api.getContextManager();
-        ImmutableContextSet contextSet = cm.getContext(user).orElse(cm.getStaticContext());
         QueryOptions queryOptions = cm.getQueryOptions(user).orElse(cm.getStaticQueryOptions());
         CachedMetaData metaData = user.getCachedData().getMetaData(queryOptions);
         return metaData.getPrefix();
