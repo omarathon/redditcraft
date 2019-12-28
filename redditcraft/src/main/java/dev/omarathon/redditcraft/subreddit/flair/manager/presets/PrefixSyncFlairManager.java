@@ -4,11 +4,13 @@ import dev.omarathon.redditcraft.subreddit.SubredditManager;
 import dev.omarathon.redditcraft.subreddit.flair.manager.FlairManager;
 import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairData;
 import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
-import me.lucko.luckperms.LuckPerms;
-import me.lucko.luckperms.api.Contexts;
-import me.lucko.luckperms.api.LuckPermsApi;
-import me.lucko.luckperms.api.User;
-import me.lucko.luckperms.api.caching.MetaData;
+import net.luckperms.api.LuckPerms;
+import net.luckperms.api.LuckPermsProvider;
+import net.luckperms.api.cacheddata.CachedMetaData;
+import net.luckperms.api.context.ContextManager;
+import net.luckperms.api.context.ImmutableContextSet;
+import net.luckperms.api.model.user.User;
+import net.luckperms.api.query.QueryOptions;
 import org.bukkit.OfflinePlayer;
 
 public class PrefixSyncFlairManager extends FlairManager {
@@ -33,18 +35,20 @@ public class PrefixSyncFlairManager extends FlairManager {
     }
 
     private String obtainPrefix(OfflinePlayer offlinePlayer) throws FlairException {
-        LuckPermsApi api = LuckPerms.getApi();
-        if (!api.getStorage().loadUser(offlinePlayer.getUniqueId()).join()) {
+        LuckPerms api = LuckPermsProvider.get();
+        if (!api.getStorage().loadUser(offlinePlayer.getUniqueId()).join()) { // TODO: fix obtaining offline users
             // got an error whilst loading the user
             throw new FlairException(FlairException.Kind.PLAYER_LOAD_ERROR);
         }
-        User user = api.getUser(offlinePlayer.getUniqueId());
+        User user = api.getUserManager().getUser(offlinePlayer.getUniqueId());
         if (user == null) {
             throw new FlairException(FlairException.Kind.PLAYER_LOAD_ERROR);
         }
 
-        Contexts contexts = Contexts.allowAll();
-        MetaData metaData = user.getCachedData().getMetaData(contexts);
+        ContextManager cm = api.getContextManager();
+        ImmutableContextSet contextSet = cm.getContext(user).orElse(cm.getStaticContext());
+        QueryOptions queryOptions = cm.getQueryOptions(user).orElse(cm.getStaticQueryOptions());
+        CachedMetaData metaData = user.getCachedData().getMetaData(queryOptions);
         return metaData.getPrefix();
     }
 }

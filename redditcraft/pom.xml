@@ -94,12 +94,12 @@
         <dependency>
             <groupId>com.github.omarathon</groupId>
             <artifactId>ambient-messenger</artifactId>
-            <version>v1.3</version>
+            <version>v1.4</version>
         </dependency>
         <dependency>
-            <groupId>me.lucko.luckperms</groupId>
-            <artifactId>luckperms-api</artifactId>
-            <version>4.4</version>
+            <groupId>net.luckperms</groupId>
+            <artifactId>api</artifactId>
+            <version>5.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
