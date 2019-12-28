@@ -1,0 +1,349 @@
+# RedditCraft Configuration
+
+# Database Settings
+mysql:
+  # credentials
+  host: ""
+  port: 3306
+  database: "minecraft"
+  username: ""
+  password: ""
+  # the prefix for the tables in the database the plugin shall use.
+  # such tables are: <table-prefix>$accounts AND <table-prefix>$auth
+  table-prefix: "REDDITCRAFT"
+
+
+# Authentication Settings
+auth:
+  # number of minutes a user has to send their verification reddit mail to the bot
+  window-mins: 30
+  # how long a user has to do /rc auth confirm after being prompted to do so from /rc auth begin
+  confirmation-window-seconds: 30
+  # how often the garbage collection procedure for expired auth tokens is executed on the database
+  garbage-collector-cooldown-hours: 2
+
+  # Verifier Settings
+  verification:
+    # how often the inbox of the bot will be checked for verification messages
+    cooldown-seconds: 30
+    # the subject of the reddit mail the users send to the bot to verify their account
+    reddit-message-subject: "REDDITCRAFT VERIFICATION"
+    # since a user can verify their account while offline, the success or failure message is sent ambiently. if the user logs in within this expiry duration, they will see the result message.
+    ambient-messages-expiry-days: 2
+    # whether players' flairs on the subreddit are to be turned on after successfully having their reddit account verified (if false, their flair is set to off - only their username will show)
+    flair-on-after-success: false
+
+
+# Subreddit Settings
+subreddit:
+  # name of your server's subreddit
+  name: "YOUR SUBREDDIT"
+
+  # Flair Settings
+  flairs:
+    # the flair mode. can be one of prefixsync, singlegroups or multiplegroups. (it's by default prefixsync, which requires LuckPerms!)
+    mode: "prefixsync"
+
+    # the formatting for the user's flair. available components: <flair>: their "group" as calculated by the flair mode, and <username> which is their corresponding minecraft username.
+    format: "<flair> | <username>"
+
+    # Flair Off Settings (when their flair is set to off)
+    'off':
+      # flair id of "off" flair
+      id: ""
+      # the formatting of the flairs. placeholders: <username> is corresponding minecraft username of player with flair off
+      format: "[<username>]"
+
+
+    # flair id for the "custom prefix" flairs. ONLY APPLY TO PREFIXSYNC AND MULTIPLEGROUPS FLAIR MODES.
+    custom-flairs-id: ""
+
+    # SingleGroups Flair Mode Settings
+    singlegroups-config:
+      # the flair groups
+      # EXAMPLE:
+#      flairs:
+#        owner:
+#          id: "e1b7418c-dc26-11e9-92d7-0ed7c307d6ae"
+#          requires-permission: "group.owner"
+#        admin:
+#          id: "a1b7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.admin"
+#        moderator:
+#          id: "e1d7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.moderator"
+#        donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator"
+#        standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard"
+      flairs: {}
+
+        # the priority list for the flairs. highest priority at the top.
+        # EXAMPLE:
+#        flair-priorities:
+#          - "owner"
+#          - "admin"
+#          - "moderator"
+#          - "donator"
+#          - "standard"
+      flair-priorities: []
+
+      # flair id for users that don't fit into any of the specified groups
+      default-flair-id: ""
+
+      # the flair id for operators, since they satisfy every permission check
+      op-flair-id: ""
+
+    # MultipleGroups Flair Mode Settings
+    multiplegroups-config:
+      # the individual flairs, as in SingleGroups
+      # EXAMPLE:
+#      flairs:
+#        owner:
+#          id: "e1b7418c-dc26-11e9-92d7-0ed7c307d6ae"
+#          requires-permission: "group.owner"
+#        admin:
+#          id: "a1b7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.admin"
+#        moderator:
+#          id: "e1d7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.moderator"
+#        high-donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator.1"
+#        low-donator:
+#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.donator.0"
+#        high-standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard.1"
+#        low-standard:
+#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          requires-permission: "group.standard.0"
+      flairs: {}
+
+      # the groups, where within you list the priorities of each flair within.
+      # EXAMPLE:
+#      groups:
+#        staff:
+#          - "owner"
+#          - "admin"
+#          - "moderator"
+#        donator:
+#          - "high-donator"
+#          - "low-donator"
+#        standard:
+#          - "high-standard"
+#          - "low-standard
+      groups: {}
+
+      # the priority list for the groups, where the highest prededence comes first
+      # EXAMPLE:
+#      group-priorities:
+#        - "staff"
+#        - "donator"
+#        - "standard"
+      group-priorities: []
+
+
+      # the flair id for operators, since they satisfy every permission check
+      op-flair-id: ""
+
+      # the delimiter between each flair in each group.
+      delimiter: " | "
+
+
+# PlaceholderAPI Placeholder Settings
+placeholders:
+  # the %redditcraft_authenticatedredditusername% placeholder
+  authenticatedredditusername:
+    # if they have no authenticated reddit account
+    none: "NOT-AUTHENTICATED"
+    # if an error occured obtaining their potentially authenticated reddit account
+    error: "ERROR"
+
+
+# Messages Settings (you are recommended to leave these alone)
+messages:
+  prefix: "&8[&c&lReddit&f&lCraft&8] &f"
+
+  # general multi-purpose messages
+  general:
+    error: "&cAn error occured executing this command. Please inform the developers."
+    incorrect-usage: "&cIncorrect usage!"
+    no-permission: "&cNo permission!"
+    player-only-command: "&cThis command may only be executed by a player!"
+
+  # authentication multi-purpose messages
+  auth:
+    verifier:
+      success: "&aYour reddit account was successfully authenticated!"
+      failure: "&cYour reddit account failed to authenticate. Please try again."
+      success-but-flair-failed: "&aYour reddit account was successfully authenticated &c&lbut your flair on the subreddit failed to apply. &ePlease try to update it with &6/rc flair update&e, and if this fails contact the developers."
+      error: "&cAn error occured when attempting to authenticate your reddit account. Please try again, and alert the developers if it persists."
+      someone-else-verified: "&cSomeone else verified your given reddit account before you! Please authenticate again with a different account."
+      token-expired: "&cYour authentication token expired! Use &6/rc auth status &cto see how long your token has to expire, next time!"
+
+    status:
+      not-existing: "&cYou have never authenticated a reddit account."
+      new: "&cYou do not have an authenticated reddit account. Previous unauthenticated reddit account username: &e<username>&a."
+      new-failed: "&cYou have recently failed authenticating a reddit account with username &e<username>&c."
+      in-progress: "&cYou have &e<time-left> minutes &cleft to authenticate your reddit account with username &e<username>&c."
+      authenticated: "&aYou currently already have an authenticated reddit account with username &e<username>&a!"
+
+      admin:
+        not-existing: "&cThey have never authenticated a reddit account."
+        new: "&cThey do not have an authenticated reddit account. Previous unauthenticated reddit account username: &e<username>&a."
+        new-failed: "&cThey have recently failed authenticating a reddit account with username &e<username>&c."
+        in-progress: "&cThey have &e<time-left> minutes &cleft to authenticate their reddit account with username &e<username>&c."
+        authenticated: "&aThey currently already have an authenticated reddit account with username &e<username>&a!"
+
+  # flair multi-purpose messages
+  flair:
+    not-authenticated: "&cYour reddit account is not authenticated! In order to access flairs, please authenticate your reddit account."
+
+    status:
+      'on': "&eYour flair is &aon&e. Your group and your username will show after updating your flair."
+      'off': "&eYour flair is &coff&e. Only your username will show after updating your flair."
+      'null': "&cYou have no flair. Please ensure you're authenticated."
+      not-existing: "&cYou are not authenticated, and so have no flair. Please authenticate if you wish to show your username and/or group."
+
+      admin:
+        'on': "&eTheir flair is &aon&e. Their group and username will show after updating."
+        'off': "&eTheir flair is &coff&e. Only their username will show after updating."
+        'null': "&cThey have no flair."
+        not-existing: "&cThey are not authenticated, and so have no flair. They must authenticate if they wish to show their username and/or group."
+
+  # messages used by each command. note this structure follows the command structure of the plugin.
+  commands:
+    reddit:
+      message: "&eServer subreddit link: &6<subreddit>"
+
+    redditcraft:
+      help:
+        message: |-
+          &eRedditCraft help:
+           + &6auth &e- &7player authentication commands.&e
+           + &6flair &e- &7player flair management commands.&e
+           + &6admin &e- &7admin commands.
+      authentication:
+        help:
+          message: |-
+            &eAuthentication help:
+             - &6begin <reddit username> &e- &7begin authenticating the given reddit username with your Minecraft account.&e
+             - &6status &e- &7see your authentication status.&e
+             - &6confirm &e- &7confirm an authentication procedure (you will only have to use this if prompted).
+        begin:
+          prompt: |
+            &c&l» AUTHENTICATION PROCEDURE «%n
+            &ePlease go to the following link: &6https://www.reddit.com/message/compose/?to=<bot-name>
+            &eand send a &cprivate message &eto the reddit account:%n
+             &e» &6&l<bot-name>%n
+            &ewith the following information:%n
+             &e» &c&lSUBJECT&e: &6<subject>
+             &e» &c&lBODY&e: &6<minecraft-username>%n
+            &efrom the reddit account:%n
+             &e» &6&l<username>%n
+            &eThen, within &c<window> seconds &eyour authentication message will be processed.
+          confirm-prompt: '&aDo &e/rc auth confirm &awithin &e<confirm-window> seconds
+            &ato confirm your change in reddit username...'
+          invalid-args-amount: '&cPlease provide a single Reddit username.'
+          invalid-username-format: '&cPlease enter a Reddit username of a valid format.'
+          non-existing-username: '&cNo Reddit account found with the specified username!'
+        confirm:
+          invalid-args-amount: '&cThis command takes no arguments.'
+          nothing-to-confirm: '&CNothing to confirm!'
+          status-changed: '&cYour authentication status changed. &ePlease re-authenticate
+            with &6/rc auth begin&e.'
+          success: '&aAuthentication confirmation successful. Please proceed to verify
+            your reddit account...'
+
+      flair:
+        help:
+          message: |-
+            &eFlair help:
+             - &6on &e- &7turn on your flair on the subreddit. It will show both your group and your username after updating.&e
+             - &6off &e- &7turn off your flair on the subreddit. It will show only your username after updating.&e
+             - &6status &e- &7Obtain your local flair status.&e
+             - &6update &e- &7update your flair on the subreddit to that described by your flair status.&e
+             - &6remove &e- &7remove your flair from the subreddit. Neither your group nor your username will show. &cYou do not need to update to make this change.
+
+        'on':
+          success: |-
+            &eFlair turned &aon&e! Your group and username will be visible.
+             » Do &6/rc flair update &eto update it!
+          error: "&cError turning on your flair. Please check your Reddit account is authenticated, otherwise inform the developers."
+
+        'off':
+          success: |-
+            &eFlair turned &coff&e! Only your username will be visible.
+             » Do &6/rc flair update &eto update it!
+          error: "&cError turing off your flair. Please check your Reddit account is authenticated, otherwise inform the developers."
+
+        update:
+          success: "&eSuccessfully updated your flair to <status>&e!"
+          error: "&cError updating your flair. Please check your Reddit account is authenticated, otherwise inform the developers."
+
+        remove:
+          success: "&eFlair &c&lremoved&e. You do not need to update it."
+          error: "&cError removing your flair. Please check your Reddit account is authenticated, otherwise inform the developers."
+
+      admin:
+        help:
+          message: |-
+            &eAdmin help:
+             + &6auth &e- &7admin authentication management commands.&e
+             + &6flair &e- &7admin flair management commands.&e
+             - &6reload &e- &7reload RedditCraft.&e
+             - &6reset &e- &7reset the database data and reload the plugin &c(dangerous!) - &lIMPORTANT NOTE: &cit's is recommended to call &6/rc admin flair remove all &cbefore calling this to remove all the flairs from the subreddit&e
+
+        reload:
+          begin-prompt: '&cReloading RedditCraft...'
+          success-prompt: '&aRedditCraft reloaded!'
+
+        authentication:
+          help:
+            message: |-
+              &eAdmin authentication help:
+               + &6verifier &e- &7admin verifier management commands.&e
+               + &6garbage &e- &7database garbage collector admin commands.&e
+               - &6force <minecraft uuid> <reddit username> &e- &7force-authenticate the reddit account with the given username to the minecraft account with the given uuid.&e
+               - &6status <minecraft uuid> &e- &7obtain the authentication status of the minecraft player with the given uuid.&e
+               - &6void <minecraft uuid> &e- &7void (unauthenticate if authenticated, cancel authentication attempt if in progress) a player's authentication status with the given uuid.&e
+               - &6invalidatetokens &e- &7invalidate all in-progress authentication attempts &c(dangerous!)&e
+               - &6resolve <reddit/minecraft> <reddit username/minecraft uuid> &8[all/*]&e - &7resolve the minecraft account authenticated with the given reddit username, or the reddit account authenticated with the given minecraft uuid. all/* additional parameter resolves all ASSOCIATED accounts, not just authenticated ones.
+          garbagecollector:
+            help:
+              message: |-
+                &eGarbage collector help:
+                 - &6run &e- &7run the garbage collection procedure on the database.
+          verification:
+            help:
+              message: |-
+                &eVerification help:
+                 - &6run &e- &7run the verifier verbosely (sends results to you).&e
+                 - &6run quiet &e- &7run the verifier quietly (doesn't send the results to you).
+
+        flair:
+          help:
+            message: |
+              &eAdmin flair help:
+               &7» NOTE: the main parameter to these commands is the UUID of the minecraft player you with to execute the command against.
+               » if the &call &7or &c* &7parameter is available, it will apply the command to ALL AUTHENTICATED PLAYERS &c(dangerous!)&7
+               » an additional "quiet" parameter causes the results to only be logged to console, and not sent to the sender.&e
+
+               - &6on <minecraft uuid&c/all/*&6> &8[quiet] &e- &7attempt to turn on a minecraft player's flair.&e
+               - &6off <minecraft uuid&c/all/*&6> &8[quiet] &e- &7attempt to turn off a minecraft player's flair.&e
+               - &6remove <minecraft uuid&c/all/*&6> &8[quiet] &e- &7attempt to remove a minecraft player's flair. &c(do not need to update to make this go through!)&e
+               - &6update <minecraft uuid&c/all/*&6> &8[quiet] &e- &7attempt to update a minecraft player's flair.&e
+               - &6status <minecraft uuid> &e- &7attempt to obtain the status of a minecraft player's flair.&e
+
+
+
+
+
+
+
+

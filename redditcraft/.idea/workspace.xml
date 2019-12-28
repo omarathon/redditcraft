@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java" line="26" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/resources/plugin.yml" line="18" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01a17621-5d08-4753-accb-4c9ecaab88d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/RedditCraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/RedditCraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/AuthManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/AuthManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/ScheduledServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/ScheduledServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/garbagecollector/GarbageCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/garbagecollector/GarbageCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/garbagecollector/ScheduledGarbageCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/garbagecollector/ScheduledGarbageCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/ScheduledVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/ScheduledVerifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/VerificationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/VerificationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/Verifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/Verifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainCommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainCommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/RedditCommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/RedditCommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/AdminSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/AdminSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/AuthSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/AuthSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/GarbageSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/GarbageSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/RunHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/RunHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ForceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ForceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/InvalidateTokensHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/InvalidateTokensHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ResolveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ResolveHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/StatusHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/StatusHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/VoidHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/VoidHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/RunHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/RunHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/VerificationSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/VerificationSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/FlairSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/FlairSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/FlairAdminHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/FlairAdminHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OffHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OnHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OnHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/RemoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/RemoveHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/StatusHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/StatusHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/UpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/UpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ReloadHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ReloadHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/Reloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/Reloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ResetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ResetHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/AuthSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/AuthSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/BeginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/BeginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/ConfirmHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/ConfirmHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/ConfirmQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/ConfirmQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/StatusHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/StatusHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/FlairSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/FlairSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/FlairPlayerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/FlairPlayerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OffHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OnHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OnHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/RemoveHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/RemoveHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/StatusHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/StatusHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/UpdateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/UpdateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/presets/HelpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/presets/HelpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/presets/PlayerOnlyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/presets/PlayerOnlyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/CommandContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/CommandContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/EndpointCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/EndpointCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/PermissionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/PermissionResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/selector/Selector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/selector/Selector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/selector/SelectorArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/selector/SelectorArgs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/EndpointEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/EndpointEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/AuthStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/AuthStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/FlairStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/FlairStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/RedditUsernameAuthenticatedPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/RedditUsernameAuthenticatedPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/AccountTableDataEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/AccountTableDataEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/AuthTableDataEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/AuthTableDataEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/TableDataEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/TableDataEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAccountTableDataEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAccountTableDataEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAuthTableDataEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAuthTableDataEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AccountFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AccountFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AuthFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AuthFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQLConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQLConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Messaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Messaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/RedditHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/RedditHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/RepeatingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/RepeatingTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/SQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/SQLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/papi/RedditCraftExpansion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/papi/RedditCraftExpansion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/reddit/Reddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/reddit/Reddit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/SubredditManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/SubredditManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/FlairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/FlairManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/lib/FlairData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/lib/FlairData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/lib/FlairException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/lib/FlairException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/MultipleGroupsFlairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/MultipleGroupsFlairManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/PrefixSyncFlairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/PrefixSyncFlairManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/SingleGroupsFlairManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/SingleGroupsFlairManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3757">
+              <caret line="221" column="54" selection-start-line="221" selection-start-column="54" selection-end-line="221" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainCommandExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/RedditCommandExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+              <folding>
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#1853#1854#0" expanded="true" />
+                <element signature="e#2021#2022#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
+                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="e#2230#2231#0" expanded="true" />
+                <element signature="e#2278#2279#0" expanded="true" />
+                <element signature="e#2844#2845#0" expanded="true" />
+                <element signature="e#2913#2914#0" expanded="true" />
+                <element signature="e#2971#2972#0" expanded="true" />
+                <element signature="e#3038#3039#0" expanded="true" />
+                <element signature="e#3074#3075#0" expanded="true" />
+                <element signature="e#3106#3107#0" expanded="true" />
+                <element signature="e#3140#3141#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
+                <element signature="e#3218#3219#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/RedditCraft.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="114" column="84" selection-start-line="114" selection-start-column="84" selection-end-line="114" selection-end-column="84" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainSelector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/EndpointEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/StatusHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>off</find>
+      <find>config</find>
+      <find>verify</find>
+      <find>getunique</find>
+      <find>RedditCraft.getinstance</find>
+      <find>from ver</find>
+      <find>ambientmess</find>
+      <find>messages</find>
+      <find>getredd</find>
+      <find>selectall</find>
+      <find>\n</find>
+      <find>all</find>
+      <find>&lt;status&gt;</find>
+      <find>updateauthenti</find>
+      <find>expiredauth</find>
+      <find>getnewauth</find>
+      <find>authenticated</find>
+      <find>FlairManager</find>
+      <find>SubredditManager</find>
+      <find>AuthSQL</find>
+      <find>catch</find>
+      <find>SQLExc</find>
+      <find>processauth</find>
+      <find>FlairSQL</find>
+      <find>AuthSQL.</find>
+      <find>FlairSQL.</find>
+      <find>SQLException</find>
+      <find>updateflair</find>
+      <find>flairmanager</find>
+      <find>1.0</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>SQL.handleSQLException</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\Omar\Desktop\projects\java\plugins\RedditCraft</dir>
+      <dir>C:\Users\Omar\Desktop\projects\java\plugins\RedditCraft\src\main\java</dir>
+      <dir>C:\Users\Omar\Desktop\projects\java\plugins\RedditCraft\src\main\java\dev\omarathon\redditcraft</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainSelector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainCommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/presets/MultipleGroupsFlairManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/handler/Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/ConfirmHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/StatusHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/garbagecollector/GarbageCollector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/AuthStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/lib/FlairData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/InvalidateTokensHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/FlairPlayerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/FlairAdminHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ResolveHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OffHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OnHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/StatusHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/StatusHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OffHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OnHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/RemoveHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/UpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/RemoveHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/UpdateHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AccountFields.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/AuthFields.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/AuthManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAuthTableDataEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/SubredditManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/FlairStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/papi/RedditCraftExpansion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAccountTableDataEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ForceHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/FlairManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/VoidHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Messaging.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ResetHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/BeginHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/StatusHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/EndpointEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/VerificationResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/Verifier.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/RedditCommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/RedditCraft.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RedditCraft" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="RedditCraft" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1304" />
+    <option name="width" value="1263" />
+    <option name="height" value="1447" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redditcraft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redditcraft" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="redditcraft" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RedditCraft" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RedditCraft" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../plugins/ambient-messenger" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dev.omarathon.redditcraft.data.engines.presets.sql" />
+      <recent name="dev.omarathon.redditcraft.commands.selector" />
+      <recent name="dev.omarathon.redditcraft.data" />
+      <recent name="dev.omarathon.redditcraft.data.endpoints.flairstatus" />
+      <recent name="dev.omarathon.redditcraft.data.endpoints.authstatus" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Omar\Desktop\projects\kotlin\RedditForums" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="RedditForums build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01a17621-5d08-4753-accb-4c9ecaab88d1" name="Default Changelist" comment="" />
+      <created>1567341253461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567341253461</updated>
+      <workItem from="1567341256485" duration="4227000" />
+      <workItem from="1567376845993" duration="3903000" />
+      <workItem from="1567509300327" duration="744000" />
+      <workItem from="1567528773861" duration="27165000" />
+      <workItem from="1567694996380" duration="5050000" />
+      <workItem from="1567950188536" duration="2196000" />
+      <workItem from="1568032755275" duration="25531000" />
+      <workItem from="1568219603917" duration="16528000" />
+      <workItem from="1568271813199" duration="22325000" />
+      <workItem from="1568317639425" duration="2229000" />
+      <workItem from="1568428167285" duration="2000" />
+      <workItem from="1568484327340" duration="17069000" />
+      <workItem from="1568565011779" duration="4090000" />
+      <workItem from="1568569357038" duration="22814000" />
+      <workItem from="1568693233656" duration="11232000" />
+      <workItem from="1568746283555" duration="22054000" />
+      <workItem from="1568775555451" duration="1334000" />
+      <workItem from="1568853833944" duration="3993000" />
+      <workItem from="1568861299771" duration="2835000" />
+      <workItem from="1568935697484" duration="18000" />
+      <workItem from="1568937173679" duration="1524000" />
+      <workItem from="1568943085617" duration="13079000" />
+      <workItem from="1569014381773" duration="10357000" />
+      <workItem from="1569037051633" duration="4067000" />
+      <workItem from="1569108379738" duration="23774000" />
+      <workItem from="1569204837365" duration="15645000" />
+      <workItem from="1569263303509" duration="3171000" />
+      <workItem from="1569299970976" duration="38194000" />
+      <workItem from="1569431264788" duration="36919000" />
+      <workItem from="1569515701693" duration="630000" />
+      <workItem from="1569549137479" duration="3622000" />
+      <workItem from="1569565483967" duration="634000" />
+      <workItem from="1569567604555" duration="16698000" />
+      <workItem from="1569661965419" duration="1542000" />
+      <workItem from="1569726871388" duration="8621000" />
+      <workItem from="1569790833267" duration="1214000" />
+      <workItem from="1569804990596" duration="600000" />
+      <workItem from="1569888291138" duration="3095000" />
+      <workItem from="1570071661144" duration="9000" />
+      <workItem from="1570073992661" duration="883000" />
+      <workItem from="1570221476943" duration="1805000" />
+      <workItem from="1570633146388" duration="60000" />
+      <workItem from="1577506762095" duration="102000" />
+      <workItem from="1577506932398" duration="658000" />
+    </task>
+    <task id="LOCAL-00001" summary="fixes and cleanup">
+      <created>1569587728461</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569587728461</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="382242000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="54" y="-8" width="2514" height="1456" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19030155" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32879817" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32879817" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39984882" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32955405" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32955405" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32728648" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32955405" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24979626" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.14629176" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32885087" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16829666" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32879817" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32879817" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39984882" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32728648" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.14629176" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32917705" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes and cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes and cleanup" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/FlairStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/endpoints/RedditUsernameAuthenticatedPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/papi/RedditCraftExpansion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/connection/SQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/engines/presets/sql/SQLAccountTableDataEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="236" column="9" lean-forward="true" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/subreddit/flair/manager/FlairManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="85" column="83" selection-start-line="85" selection-start-column="83" selection-end-line="85" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/helper/Messaging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/StatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/UpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/RemoveHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OnHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/handlers/OffHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/flair/FlairSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/AdminSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/AuthSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/GarbageSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/garbage/RunHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/RunHandler.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/verification/VerificationSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ForceHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/StatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/VoidHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/InvalidateTokensHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/auth/handlers/ResolveHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/FlairSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OnHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/OffHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/Reloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ReloadHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/handlers/ResetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding>
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/selector/Selector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/EndpointCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/RemoveHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/StatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/admin/flair/handlers/UpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/AuthManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/ScheduledServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/Verifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="52" column="128" selection-start-line="52" selection-start-column="128" selection-end-line="52" selection-end-column="128" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RedditForums.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/auth/verifier/VerificationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/BeginHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3757">
+          <caret line="221" column="54" selection-start-line="221" selection-start-column="54" selection-end-line="221" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/RedditCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/lib/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#1853#1854#0" expanded="true" />
+            <element signature="e#2021#2022#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2230#2231#0" expanded="true" />
+            <element signature="e#2278#2279#0" expanded="true" />
+            <element signature="e#2844#2845#0" expanded="true" />
+            <element signature="e#2913#2914#0" expanded="true" />
+            <element signature="e#2971#2972#0" expanded="true" />
+            <element signature="e#3038#3039#0" expanded="true" />
+            <element signature="e#3074#3075#0" expanded="true" />
+            <element signature="e#3106#3107#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#3218#3219#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/RedditCraft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="114" column="84" selection-start-line="114" selection-start-column="84" selection-end-line="114" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/MainSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/data/EndpointEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dev/omarathon/redditcraft/commands/auth/handlers/StatusHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>RedditForums</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
