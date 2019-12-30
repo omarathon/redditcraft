@@ -6,7 +6,7 @@
 
     <groupId>dev.omarathon</groupId>
     <artifactId>redditcraft</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
     <packaging>jar</packaging>
 
     <name>RedditCraft</name>
