@@ -12,6 +12,7 @@ public class SQL {
     private HikariDataSource hikariDataSource;
 
     public SQL(SQLConfiguration sqlConfiguration) throws SQLException {
+        hikariDataSource = new HikariDataSource();
         setup(sqlConfiguration);
         String tablePrefix = sqlConfiguration.getTablePrefix();
         accountTableName = tablePrefix + "$" + "ACCOUNTS";

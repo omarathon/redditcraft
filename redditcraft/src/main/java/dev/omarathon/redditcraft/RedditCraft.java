@@ -74,7 +74,7 @@ public final class RedditCraft extends JavaPlugin {
             sql = new SQL(Config.getSQLConfiguation());
             getLogger().info("Successfully connected MySQL!");
         }
-        catch (SQLException | ClassNotFoundException e) {
+        catch (SQLException e) {
             getLogger().severe("[FATAL] Error in connecting MySQL!");
             e.printStackTrace();
             setEnabled(false);
