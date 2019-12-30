@@ -1,28 +1,37 @@
 package dev.omarathon.redditcraft.data.engines.presets.sql.connection;
 
+import com.zaxxer.hikari.HikariDataSource;
+
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQL {
     private Connection connection;
     private String accountTableName;
     private String authTableName;
+    private HikariDataSource hikariDataSource;
 
-    public SQL(SQLConfiguration sqlConfiguration) throws SQLException, ClassNotFoundException {
+    public SQL(SQLConfiguration sqlConfiguration) throws SQLException {
+        hikariDataSource = new HikariDataSource();
         setup(sqlConfiguration);
         String tablePrefix = sqlConfiguration.getTablePrefix();
         accountTableName = tablePrefix + "$" + "ACCOUNTS";
         authTableName = tablePrefix + "$" + "AUTH";
     }
 
-    private void setup(SQLConfiguration configuration) throws SQLException, ClassNotFoundException {
+    private void setup(SQLConfiguration configuration) throws SQLException {
         synchronized (this) {
             if (getConnection() != null && !getConnection().isClosed()) {
                 return;
             }
-            Class.forName("com.mysql.jdbc.Driver");
-            setConnection(DriverManager.getConnection("jdbc:mysql://" + configuration.getHost() + ":" + configuration.getPort() + "/" + configuration.getDatabase(), configuration.getUsername(), configuration.getPassword()));
+            hikariDataSource.setMaximumPoolSize(10);
+            hikariDataSource.setDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlDataSource");
+            hikariDataSource.addDataSourceProperty("serverName", configuration.getHost());
+            hikariDataSource.addDataSourceProperty("port", configuration.getPort());
+            hikariDataSource.addDataSourceProperty("databaseName", configuration.getDatabase());
+            hikariDataSource.addDataSourceProperty("user", configuration.getUsername());
+            hikariDataSource.addDataSourceProperty("password", configuration.getPassword());
+            setConnection(this.hikariDataSource.getConnection());
         }
     }
 
