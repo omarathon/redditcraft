@@ -7,6 +7,7 @@ import dev.omarathon.redditcraft.subreddit.flair.manager.FlairManager;
 
 public class FlairSelector extends Selector {
     private FlairManager flairManager;
+    private RemoveHandler removeHandler;
 
     public FlairSelector(AdminSelector from) {
         super("flair", from);
@@ -16,10 +17,15 @@ public class FlairSelector extends Selector {
         bind(new OffHandler(this));
         bind(new StatusHandler(this));
         bind(new UpdateHandler(this));
-        bind(new RemoveHandler(this));
+        this.removeHandler = new RemoveHandler(this);
+        bind(removeHandler);
     }
 
     public FlairManager getFlairManager() {
         return flairManager;
+    }
+
+    public RemoveHandler getRemoveHandler() {
+        return removeHandler;
     }
 }

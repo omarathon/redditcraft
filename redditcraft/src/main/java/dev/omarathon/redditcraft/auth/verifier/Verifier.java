@@ -1,5 +1,6 @@
 package dev.omarathon.redditcraft.auth.verifier;
 
+import dev.omarathon.redditcraft.commands.admin.flair.FlairSelector;
 import dev.omarathon.redditcraft.data.EndpointEngine;
 import dev.omarathon.redditcraft.data.endpoints.FlairStatus;
 import dev.omarathon.redditcraft.helper.Config;
@@ -146,7 +147,9 @@ public class Verifier {
     }
 
     private void applyFlair(OfflinePlayer player, boolean flairOn) throws FlairException {
-        endpointEngine.updateFlair(player.getUniqueId(), FlairStatus.ON);
+        FlairStatus flairStatus = flairOn ? FlairStatus.ON : FlairStatus.OFF;
+        endpointEngine.updateFlair(player.getUniqueId(), flairStatus);
         flairManager.update(player);
+
     }
 }

@@ -12,13 +12,15 @@ import dev.omarathon.redditcraft.subreddit.flair.manager.FlairManager;
 public class AdminSelector extends Selector {
     private AuthManager authManager;
     private FlairManager flairManager;
+    private FlairSelector flairSelector;
 
     public AdminSelector(MainSelector from) {
         super("admin", from);
         authManager = from.getAuthManager();
         flairManager = from.getFlairManager();
         bind(new AuthSelector(this));
-        bind(new FlairSelector(this));
+        this.flairSelector = new FlairSelector(this);
+        bind(flairSelector);
         bind(new ReloadHandler(this));
         bind(new ResetHandler(this));
     }
@@ -29,5 +31,9 @@ public class AdminSelector extends Selector {
 
     public FlairManager getFlairManager() {
         return flairManager;
+    }
+
+    public FlairSelector getFlairSelector() {
+        return flairSelector;
     }
 }
