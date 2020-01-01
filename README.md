@@ -2,7 +2,7 @@
 
 # RedditCraft
 
-[[https://proxy.spigotmc.org/9dd501368fe651b6bb4c3bb1723604b6378db63b?url=https%3A%2F%2Fi.imgur.com%2FYTz2gby.png]]
+![](https://proxy.spigotmc.org/9dd501368fe651b6bb4c3bb1723604b6378db63b?url=https%3A%2F%2Fi.imgur.com%2FYTz2gby.png)
 
 RedditCraft Minecraft Server plugin source code.
 
