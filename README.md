@@ -1,6 +1,6 @@
 [![Latest Release](https://img.shields.io/github/release/omarathon/redditcraft.svg)](https://github.com/omarathon/redditcraft/releases/latest)
 <p align="center">
-  ![](https://i.imgur.com/SdISGgq.png)
+  <img width="460" height="300" src="https://i.imgur.com/SdISGgq.png">
 </p>
 RedditCraft Minecraft Server plugin source code.
 
