@@ -1,3 +1,5 @@
+[![Latest Release](https://img.shields.io/github/release/omarathon/reddit-api.svg)](https://github.com/omarathon/reddit-api/releases/latest)
+
 # RedditCraft
 
 RedditCraft Minecraft Server plugin source code.
