@@ -1,7 +1,7 @@
 [![Latest Release](https://img.shields.io/github/release/omarathon/redditcraft.svg)](https://github.com/omarathon/redditcraft/releases/latest)
-
-![](https://i.imgur.com/SdISGgq.png)
-
+<p align="center">
+  ![](https://i.imgur.com/SdISGgq.png)
+</p>
 RedditCraft Minecraft Server plugin source code.
 
 **Spigot Plugin Link: https://www.spigotmc.org/resources/redditcraft-a-forum-alternative.71607/**
