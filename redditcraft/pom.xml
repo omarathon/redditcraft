@@ -6,7 +6,7 @@
 
     <groupId>dev.omarathon</groupId>
     <artifactId>redditcraft</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <packaging>jar</packaging>
 
     <name>RedditCraft</name>
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>com.github.omarathon</groupId>
             <artifactId>reddit-api</artifactId>
-            <version>v1.0</version>
+            <version>1.1</version>
         </dependency>
 
         <dependency>

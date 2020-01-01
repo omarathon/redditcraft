@@ -25,7 +25,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: net.md-5:bungeecord-chat:1.13-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.yaml:snakeyaml:1.23" level="project" />
-    <orderEntry type="library" name="Maven: com.github.omarathon:reddit-api:v1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.omarathon:reddit-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: net.dean.jraw:JRAW:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.moshi:moshi:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.14.0" level="project" />

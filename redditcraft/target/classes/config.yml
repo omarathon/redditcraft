@@ -297,7 +297,7 @@ messages:
              + &6auth &e- &7admin authentication management commands.&e
              + &6flair &e- &7admin flair management commands.&e
              - &6reload &e- &7reload RedditCraft.&e
-             - &6reset &e- &7reset the database data and reload the plugin &c(dangerous!) - &lIMPORTANT NOTE: &cit's is recommended to call &6/rc admin flair remove all &cbefore calling this to remove all the flairs from the subreddit&e
+             - &6reset &e- &7remove all flairs from authenticated accounts on the subreddit, reset the database data and reload the plugin &c(dangerous!)
 
         reload:
           begin-prompt: '&cReloading RedditCraft...'
