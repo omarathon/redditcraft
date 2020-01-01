@@ -1,4 +1,4 @@
-[![Latest Release](https://img.shields.io/github/release/omarathon/reddit-api.svg)](https://github.com/omarathon/reddit-api/releases/latest)
+[![Latest Release](https://img.shields.io/github/release/omarathon/redditcraft.svg)](https://github.com/omarathon/redditcraft/releases/latest)
 
 # RedditCraft
 
