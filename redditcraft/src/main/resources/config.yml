@@ -29,7 +29,7 @@ auth:
   verification:
     # how often the inbox of the bot will be checked for verification messages
     cooldown-seconds: 30
-    # the subject of the reddit mail the users send to the bot to verify their account
+    # the subject of the reddit mail the users send to the bot to verify their account. NOTE: MUST NOT CONTAIN SPACES!
     reddit-message-subject: "redditcraft-verification"
     # since a user can verify their account while offline, the success or failure message is sent ambiently. if the user logs in within this expiry duration, they will see the result message.
     ambient-messages-expiry-days: 2
