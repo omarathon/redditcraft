@@ -30,7 +30,7 @@ auth:
     # how often the inbox of the bot will be checked for verification messages
     cooldown-seconds: 30
     # the subject of the reddit mail the users send to the bot to verify their account
-    reddit-message-subject: "REDDITCRAFT VERIFICATION"
+    reddit-message-subject: "redditcraft-verification"
     # since a user can verify their account while offline, the success or failure message is sent ambiently. if the user logs in within this expiry duration, they will see the result message.
     ambient-messages-expiry-days: 2
     # whether players' flairs on the subreddit are to be turned on after successfully having their reddit account verified (if false, their flair is set to off - only their username will show)
@@ -246,7 +246,7 @@ messages:
         begin:
           prompt: |
             &c&l» AUTHENTICATION PROCEDURE «%n
-            &ePlease go to the following link: &6https://www.reddit.com/message/compose/?to=<bot-name>
+            &ePlease go to the following link: &6https://www.reddit.com/message/compose/?message=<minecraft-username>&to=<bot-name>&subject=<subject>
             &eand send a &cprivate message &eto the reddit account:%n
              &e» &6&l<bot-name>%n
             &ewith the following information:%n
