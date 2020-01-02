@@ -12,6 +12,7 @@ dev\omarathon\redditcraft\commands\RedditCommandExecutor.class
 dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException.class
 dev\omarathon\redditcraft\auth\verifier\Verifier$1.class
 dev\omarathon\redditcraft\commands\auth\handlers\ConfirmHandler$1.class
+dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$5.class
 dev\omarathon\redditcraft\data\engines\presets\sql\connection\AuthFields.class
 dev\omarathon\redditcraft\commands\admin\auth\AuthSelector.class
 dev\omarathon\redditcraft\commands\auth\AuthSelector.class
@@ -95,5 +96,6 @@ dev\omarathon\redditcraft\auth\garbagecollector\GarbageCollector.class
 dev\omarathon\redditcraft\subreddit\SubredditManager.class
 dev\omarathon\redditcraft\helper\Error.class
 dev\omarathon\redditcraft\helper\RedditHelper.class
+dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$6.class
 dev\omarathon\redditcraft\commands\flair\handlers\FlairPlayerHandler.class
 dev\omarathon\redditcraft\helper\RepeatingTask.class
