@@ -20,6 +20,7 @@ public class SingleGroupsFlairManager extends FlairManager {
     private Flair defaultFlair;
     private int defaultFlairTextLength;
 
+    private boolean opsEnabled;
     private Flair opFlair;
     private int opFlairTextLength;
 
@@ -40,14 +41,17 @@ public class SingleGroupsFlairManager extends FlairManager {
         if (defaultFlair == null) throw new FlairException(FlairException.Kind.FLAIR_NOT_EXIST);
         defaultFlairTextLength = defaultFlair.getText().length();
 
-        opFlair = flairMap.get(configSection.getString("op-flair-id"));
-        if (opFlair == null) throw new FlairException(FlairException.Kind.FLAIR_NOT_EXIST);
-        opFlairTextLength = opFlair.getText().length();
+        opsEnabled = configSection.getBoolean("ops-enabled");
+        if (opsEnabled) {
+            opFlair = flairMap.get(configSection.getString("op-flair-id"));
+            if (opFlair == null) throw new FlairException(FlairException.Kind.FLAIR_NOT_EXIST);
+            opFlairTextLength = opFlair.getText().length();
+        }
     }
 
     @Override
     protected FlairData getFlair(OfflinePlayer offlinePlayer, int charLimit) throws FlairException {
-        if (offlinePlayer.isOp()) {
+        if (offlinePlayer.isOp() && opsEnabled) {
             if (opFlairTextLength > charLimit) {
                 throw new FlairException(FlairException.Kind.LENGTH_EXCEEDED);
             }

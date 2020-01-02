@@ -101,7 +101,8 @@ subreddit:
       # flair id for users that don't fit into any of the specified groups
       default-flair-id: ""
 
-      # the flair id for operators, since they satisfy every permission check
+      # the flair id for operators, since they satisfy every permission check. keep ops-enabled=false if you wish to still compute their flair
+      ops-enabled: false
       op-flair-id: ""
 
     # MultipleGroups Flair Mode Settings
@@ -156,7 +157,8 @@ subreddit:
       group-priorities: []
 
 
-      # the flair id for operators, since they satisfy every permission check
+      # the flair id for operators, since they satisfy every permission check. keep ops-enabled=false if you wish to still compute their flair
+      ops-enabled: false
       op-flair-id: ""
 
       # the delimiter between each flair in each group.
