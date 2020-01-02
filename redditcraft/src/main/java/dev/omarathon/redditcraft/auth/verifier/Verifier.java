@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 public class Verifier {
     private static ConfigurationSection settingsConfigSection = Config.getSection("auth.verification");
     private static ConfigurationSection messagesConfigSection = Config.getSection("messages.auth.verifier");
+    private boolean log;
 
     private FlairManager flairManager;
     private EndpointEngine endpointEngine;
@@ -32,11 +33,14 @@ public class Verifier {
     public Verifier(FlairManager flairManager, EndpointEngine endpointEngine) {
         this.flairManager = flairManager;
         this.endpointEngine = endpointEngine;
+        this.log = Config.getConfig().getBoolean("verbose");
     }
 
 
     public void run(CommandSender sender, boolean sendResults) {
-        Messaging.getLogger().info("Running reddit verifier...");
+        if (log) {
+            Messaging.getLogger().info("Running reddit verifier...");
+        }
         BarebonesPaginator<Message> unreadMessagePages = Reddit.getUnreadMessages();
         for (Listing<Message> unreadMessagePage : unreadMessagePages) {
             for (Message message : unreadMessagePage) {
@@ -49,8 +53,9 @@ public class Verifier {
                         if (offlinePlayer.getName().equals(username)) { // existence check
                             VerificationResult verificationResult;
                             try {
-                                if (endpointEngine.getRedditUsername(uuid).equals(message.getAuthor())) {
-                                    if (endpointEngine.getAuthenticatedUuidsWithRedditUsername(message.getAuthor()).isEmpty()) {
+                                String redditUsername = endpointEngine.getRedditUsername(uuid);
+                                if (redditUsername.equalsIgnoreCase(message.getAuthor())) {
+                                    if (endpointEngine.getAuthenticatedUuidsWithRedditUsername(redditUsername).isEmpty()) {
                                         if (LocalDateTime.now().isBefore(endpointEngine.getAuthExpiry(uuid))) {
                                             verificationResult = verify(offlinePlayer);
                                         }

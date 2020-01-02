@@ -1,7 +1,7 @@
 package dev.omarathon.redditcraft.reddit;
 
 import net.dean.jraw.RedditClient;
-import net.dean.jraw.models.AccountStatus;
+import net.dean.jraw.models.AccountQuery;
 import net.dean.jraw.models.Message;
 import net.dean.jraw.pagination.BarebonesPaginator;
 import net.dean.jraw.references.SubredditReference;
@@ -9,8 +9,8 @@ import net.dean.jraw.references.SubredditReference;
 public class Reddit {
     private static RedditClient redditClient;
 
-    public static boolean userExists(String username) {
-        return (redditClient.user(username).query().getStatus() == AccountStatus.EXISTS);
+    public static AccountQuery getRedditUser(String username) {
+        return redditClient.user(username).query();
     }
 
     public static void setLogging(boolean log) {

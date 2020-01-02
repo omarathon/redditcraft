@@ -8,6 +8,8 @@ import dev.omarathon.redditcraft.helper.Error;
 import dev.omarathon.redditcraft.helper.Messaging;
 import dev.omarathon.redditcraft.helper.RedditHelper;
 import dev.omarathon.redditcraft.reddit.Reddit;
+import net.dean.jraw.models.AccountQuery;
+import net.dean.jraw.models.AccountStatus;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -100,12 +102,11 @@ public class BeginHandler extends PlayerOnlyHandler {
             Messaging.sendPrefixedMessage(player, commandMessages.getString("invalid-username-format"));
             return null;
         }
-        if (!(Reddit.userExists(username))) {
+        AccountQuery accountQuery = Reddit.getRedditUser(username);
+        if (accountQuery.getStatus() != AccountStatus.EXISTS) {
             Messaging.sendPrefixedMessage(player, commandMessages.getString("non-existing-username"));
             return null;
         }
-        else {
-            return username;
-        }
+        return accountQuery.getAccount().getName();
     }
 }

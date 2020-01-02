@@ -8,6 +8,8 @@ import dev.omarathon.redditcraft.helper.Error;
 import dev.omarathon.redditcraft.helper.Messaging;
 import dev.omarathon.redditcraft.helper.RedditHelper;
 import dev.omarathon.redditcraft.reddit.Reddit;
+import net.dean.jraw.models.AccountQuery;
+import net.dean.jraw.models.AccountStatus;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
@@ -49,11 +51,12 @@ public class ForceHandler extends Handler {
             Messaging.sendPrefixedMessage(sender, "&cInvalid reddit username!");
             return;
         }
-        if (!(Reddit.userExists(redditUsername))) {
+        AccountQuery accountQuery = Reddit.getRedditUser(redditUsername);
+        if (accountQuery.getStatus() !=  AccountStatus.EXISTS) {
             Messaging.sendPrefixedMessage(sender, "&cReddit user with provided username doesn't exist!");
             return;
         }
-
+        redditUsername = accountQuery.getAccount().getName();
         try {
             List<UUID> results = endpointEngine.getAuthenticatedUuidsWithRedditUsername(redditUsername);
             if (!results.isEmpty() && !((results.size() == 1 && results.get(0).equals(uuid)))) {
