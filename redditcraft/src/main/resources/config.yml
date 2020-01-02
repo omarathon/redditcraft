@@ -102,25 +102,25 @@ subreddit:
       # EXAMPLE:
 #      flairs:
 #        owner:
-#          id: "e1b7418c-dc26-11e9-92d7-0ed7c307d6ae"
+#          flair-text: "OWNER"
 #          requires-permission: "group.owner"
 #        admin:
-#          id: "a1b7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "ADMIN"
 #          requires-permission: "group.admin"
 #        moderator:
-#          id: "e1d7418c-dc26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "MODERATOR"
 #          requires-permission: "group.moderator"
 #        high-donator:
-#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "DONATOR+"
 #          requires-permission: "group.donator.1"
 #        low-donator:
-#          id: "e1b7418c-ac26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "DONATOR"
 #          requires-permission: "group.donator.0"
 #        high-standard:
-#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "STANDARD+"
 #          requires-permission: "group.standard.1"
 #        low-standard:
-#          id: "e1b7418c-cc26-11e9-92d7-0ed7c307d6ee"
+#          flair-text: "STANDARD"
 #          requires-permission: "group.standard.0"
       flairs: {}
 
@@ -136,7 +136,7 @@ subreddit:
 #          - "low-donator"
 #        standard:
 #          - "high-standard"
-#          - "low-standard
+#          - "low-standard"
       groups: {}
 
       # the priority list for the groups, where the highest prededence comes first

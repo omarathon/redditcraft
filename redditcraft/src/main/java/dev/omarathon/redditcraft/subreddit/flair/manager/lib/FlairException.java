@@ -5,32 +5,42 @@ public class FlairException extends RuntimeException {
         LENGTH_EXCEEDED {
             @Override
             public String toString() {
-                return "Flair too long!";
+                return "Flair exception: Flair too long!";
             }
         },
 
         PLAYER_NOT_EXIST {
             @Override
             public String toString() {
-                return "Minecraft player doesn't exist!";
+                return "Flair exception: Minecraft player doesn't exist!";
             }
         },
 
-        PLAYER_NOT_ONLINE,
+        PLAYER_NOT_ONLINE{
+            @Override
+            public String toString() {
+                return "Flair exception: Player not online!";
+            }
+        },
 
-        NO_FOUND_REDDIT_USERNAME,
+        NO_FOUND_REDDIT_USERNAME {
+            @Override
+            public String toString() {
+                return "Flair exception: No found reddit username!";
+            }
+        },
 
         FLAIR_NOT_EXIST {
             @Override
             public String toString() {
-                return "Flair doesn't exist!";
+                return "Flair exception: Flair doesn't exist!";
             }
         },
 
         PLAYER_LOAD_ERROR {
             @Override
             public String toString() {
-                return "Player failed to load - may not exist!";
+                return "Flair exception: Player failed to load - may not exist!";
             }
         };
 

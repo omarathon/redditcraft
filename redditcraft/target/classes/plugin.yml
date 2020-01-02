@@ -1,5 +1,5 @@
 name: RedditCraft
-version: 1.4.1
+version: 1.4.2
 main: dev.omarathon.redditcraft.RedditCraft
 api-version: 1.13
 authors: [omarathon]
