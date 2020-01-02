@@ -16,13 +16,6 @@ public class FlairException extends RuntimeException {
             }
         },
 
-        PLAYER_NOT_ONLINE{
-            @Override
-            public String toString() {
-                return "Flair exception: Player not online!";
-            }
-        },
-
         NO_FOUND_REDDIT_USERNAME {
             @Override
             public String toString() {
@@ -37,10 +30,31 @@ public class FlairException extends RuntimeException {
             }
         },
 
-        PLAYER_LOAD_ERROR {
+        PREFIX_LOAD_TIMEOUT {
             @Override
             public String toString() {
-                return "Flair exception: Player failed to load - may not exist!";
+                return ("Flair exception: Lookup of player prefix timed out!");
+            }
+        },
+
+        PREFIX_LOAD_ERROR {
+            @Override
+            public String toString() {
+                return "Flair exception: Failed to obtain player prefix!";
+            }
+        },
+
+        PERMISSION_CHECK_TIMEOUT {
+            @Override
+            public String toString() {
+                return "Flair exception: Permission check timed out!";
+            }
+        },
+
+        PERMISSION_CHECK_ERROR {
+            @Override
+            public String toString() {
+                return "Flair exception: Failed to perform permission check!";
             }
         };
 

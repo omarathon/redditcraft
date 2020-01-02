@@ -7,6 +7,8 @@ import dev.omarathon.redditcraft.subreddit.SubredditManager;
 import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairData;
 import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
 import net.dean.jraw.models.Flair;
+import net.milkbowl.vault.chat.Chat;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.ConfigurationSection;
 import org.jetbrains.annotations.NotNull;
@@ -22,6 +24,8 @@ public abstract class FlairManager {
     protected Map<String, Flair> flairMap; // key is the flair id, value is the flair
     private ConfigurationSection offConfigSection;
     protected EndpointEngine endpointEngine;
+    protected Chat chat;
+    protected Permission perm;
 
     private static final int FLAIR_MAX_LENGTH = 64;
 

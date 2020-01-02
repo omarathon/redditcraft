@@ -44,4 +44,8 @@ public class Config {
     public static String fillPlaceholder(String message, String placeholder, String value) {
         return message.replaceAll("<" + placeholder + ">", value);
     }
+
+    public static FileConfiguration getConfig() {
+        return config;
+    }
 }

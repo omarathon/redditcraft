@@ -13,6 +13,10 @@ public class Reddit {
         return (redditClient.user(username).query().getStatus() == AccountStatus.EXISTS);
     }
 
+    public static void setLogging(boolean log) {
+        redditClient.setLogHttp(log);
+    }
+
     public static RedditClient getRedditClient() {
         return redditClient;
     }

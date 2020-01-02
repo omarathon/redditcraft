@@ -1,4 +1,7 @@
-# RedditCraft Configuration
+# RedditCraft Configuration (FOR COMMENTS, please find the full file at https://github.com/omarathon/redditcraft/blob/master/redditcraft/src/main/resources/config.yml)
+
+# whether to see the HTTP requests between Reddit or not (by default do not see the details)
+verbose: false
 
 # Database Settings
 mysql:
@@ -41,7 +44,7 @@ subreddit:
 
   # Flair Settings
   flairs:
-    # the flair mode. can be one of prefixsync, singlegroups or multiplegroups. (it's by default prefixsync, which requires LuckPerms!)
+    # the flair mode. can be one of prefixsync, singlegroups or multiplegroups.
     mode: "prefixsync"
 
     # the formatting for the user's flair. available components: <flair>: their "group" as calculated by the flair mode, and <username> which is their corresponding minecraft username.
@@ -57,6 +60,11 @@ subreddit:
 
     # flair id for the "custom prefix" flairs. ONLY APPLY TO PREFIXSYNC AND MULTIPLEGROUPS FLAIR MODES.
     custom-flairs-id: ""
+
+    # lookup timeout duration for prefixes of offline players (only applies to prefixsync)
+    offline-prefix-lookup-timeout-ms: 100
+    # lookup timeout duration for permission nodes of offline players (only applies to singlegroups and multiplegroups)
+    offline-permission-node-lookup-timeout-ms: 100
 
     # SingleGroups Flair Mode Settings
     singlegroups-config:

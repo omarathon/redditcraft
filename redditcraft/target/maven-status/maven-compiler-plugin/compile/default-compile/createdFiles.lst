@@ -9,6 +9,7 @@ dev\omarathon\redditcraft\data\engines\TableDataEngine.class
 dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$2.class
 dev\omarathon\redditcraft\RedditCraft.class
 dev\omarathon\redditcraft\commands\RedditCommandExecutor.class
+dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$8.class
 dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException.class
 dev\omarathon\redditcraft\auth\verifier\Verifier$1.class
 dev\omarathon\redditcraft\commands\auth\handlers\ConfirmHandler$1.class
@@ -21,7 +22,9 @@ dev\omarathon\redditcraft\data\EndpointEngine.class
 dev\omarathon\redditcraft\commands\flair\handlers\RemoveHandler.class
 dev\omarathon\redditcraft\commands\auth\handlers\StatusHandler.class
 dev\omarathon\redditcraft\data\endpoints\AuthStatus$3.class
+dev\omarathon\redditcraft\helper\async\TimeLimitedCodeBlock.class
 dev\omarathon\redditcraft\commands\selector\Selector$1.class
+dev\omarathon\redditcraft\helper\async\PermissionRunnable.class
 dev\omarathon\redditcraft\auth\verifier\VerificationResult.class
 dev\omarathon\redditcraft\commands\flair\FlairSelector.class
 dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$4.class
@@ -35,6 +38,7 @@ dev\omarathon\redditcraft\commands\admin\auth\handlers\VoidHandler.class
 dev\omarathon\redditcraft\data\endpoints\AuthStatus$4.class
 dev\omarathon\redditcraft\auth\AuthManager.class
 dev\omarathon\redditcraft\commands\handler\presets\PlayerOnlyHandler.class
+dev\omarathon\redditcraft\helper\async\PrefixRunnable.class
 dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$3.class
 dev\omarathon\redditcraft\subreddit\flair\manager\presets\PrefixSyncFlairManager.class
 dev\omarathon\redditcraft\commands\admin\flair\handlers\RemoveHandler.class
@@ -50,6 +54,7 @@ dev\omarathon\redditcraft\data\endpoints\AuthStatus$5.class
 dev\omarathon\redditcraft\commands\lib\EndpointCommand.class
 dev\omarathon\redditcraft\commands\handler\presets\HelpHandler.class
 dev\omarathon\redditcraft\auth\verifier\Verifier.class
+dev\omarathon\redditcraft\helper\VaultAsync.class
 dev\omarathon\redditcraft\auth\ScheduledServices.class
 dev\omarathon\redditcraft\commands\lib\Command.class
 dev\omarathon\redditcraft\reddit\Reddit.class
@@ -78,6 +83,7 @@ dev\omarathon\redditcraft\subreddit\flair\manager\presets\SingleGroupsFlairManag
 dev\omarathon\redditcraft\commands\flair\handlers\UpdateHandler.class
 dev\omarathon\redditcraft\data\engines\presets\sql\SQLAccountTableDataEngine.class
 dev\omarathon\redditcraft\data\engines\presets\sql\SQLAuthTableDataEngine.class
+dev\omarathon\redditcraft\subreddit\flair\manager\lib\FlairException$Kind$7.class
 dev\omarathon\redditcraft\commands\admin\auth\garbage\GarbageSelector.class
 dev\omarathon\redditcraft\commands\lib\CommandContext.class
 dev\omarathon\redditcraft\commands\admin\flair\handlers\FlairAdminHandler.class
@@ -91,6 +97,7 @@ dev\omarathon\redditcraft\data\engines\presets\sql\connection\SQL.class
 dev\omarathon\redditcraft\data\endpoints\AuthStatus$1.class
 dev\omarathon\redditcraft\commands\auth\handlers\BeginHandler.class
 dev\omarathon\redditcraft\data\endpoints\AuthStatus.class
+dev\omarathon\redditcraft\helper\async\TimeLimitedCodeBlock$1.class
 dev\omarathon\redditcraft\commands\admin\flair\handlers\UpdateHandler.class
 dev\omarathon\redditcraft\auth\garbagecollector\GarbageCollector.class
 dev\omarathon\redditcraft\subreddit\SubredditManager.class
