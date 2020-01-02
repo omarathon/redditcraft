@@ -1,5 +1,6 @@
 package dev.omarathon.redditcraft.subreddit.flair.manager.presets;
 
+import dev.omarathon.redditcraft.helper.VaultAsync;
 import dev.omarathon.redditcraft.subreddit.SubredditManager;
 import dev.omarathon.redditcraft.subreddit.flair.manager.FlairManager;
 import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairData;
@@ -7,10 +8,11 @@ import dev.omarathon.redditcraft.subreddit.flair.manager.lib.FlairException;
 import net.dean.jraw.models.Flair;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class MultipleGroupsFlairManager extends FlairManager {
     private String delimiter;
@@ -23,6 +25,8 @@ public class MultipleGroupsFlairManager extends FlairManager {
     private Flair opFlair;
     private int opFlairTextLength;
 
+    private int offlinePermissionLookupTimeoutMs;
+
     public MultipleGroupsFlairManager(SubredditManager subredditManager) throws FlairException {
         super(subredditManager);
         flairId = flairsConfigSection.getString("custom-flairs-id");
@@ -30,6 +34,7 @@ public class MultipleGroupsFlairManager extends FlairManager {
             throw new FlairException(FlairException.Kind.FLAIR_NOT_EXIST);
         }
         ConfigurationSection configSection = flairsConfigSection.getConfigurationSection("multiplegroups-config");
+        offlinePermissionLookupTimeoutMs = flairsConfigSection.getInt("offline-permission-node-lookup-timeout-ms");
         delimiter = configSection.getString("delimiter");
         delimiterLength = delimiter.length();
         groups = configSection.getConfigurationSection("groups");
@@ -52,16 +57,21 @@ public class MultipleGroupsFlairManager extends FlairManager {
         List<String> flairsList = new ArrayList<>();
         int completeFlairLength = 0;
         if (charLimit > 0) {
-            // require online player because need to do permission checks
-            Player player = offlinePlayer.getPlayer();
-            if (player == null) {
-                throw new FlairException(FlairException.Kind.PLAYER_NOT_ONLINE);
-            }
             boolean iterateGroups = true;
             for (String group : groupPriorities) {
                 for (String flair : groups.getStringList(group)) {
                     ConfigurationSection flairData = flairs.getConfigurationSection(flair);
-                    if (player.hasPermission(flairData.getString("requires-permission"))) {
+                    boolean hasPerm;
+                    try {
+                        hasPerm = VaultAsync.hasPermission(offlinePlayer, flairData.getString("requires-permission"), subredditManager.getPerm(), offlinePermissionLookupTimeoutMs, TimeUnit.MILLISECONDS);
+                    }
+                    catch (Exception e) {
+                        if (e instanceof TimeoutException) {
+                            throw new FlairException(FlairException.Kind.PERMISSION_CHECK_TIMEOUT);
+                        }
+                        throw new FlairException(FlairException.Kind.PERMISSION_CHECK_ERROR);
+                    }
+                    if (hasPerm) {
                         String flairText = flairData.getString("flair-text");
                         int flairTextLength = flairText.length();
                         if (flairsList.size() == 0) {

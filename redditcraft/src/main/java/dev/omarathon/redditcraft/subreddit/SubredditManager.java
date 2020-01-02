@@ -10,6 +10,8 @@ import dev.omarathon.redditcraft.subreddit.flair.manager.presets.SingleGroupsFla
 import net.dean.jraw.ApiException;
 import net.dean.jraw.models.Flair;
 import net.dean.jraw.references.SubredditReference;
+import net.milkbowl.vault.chat.Chat;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.configuration.ConfigurationSection;
 
 import java.util.HashMap;
@@ -22,13 +24,17 @@ public class SubredditManager {
     private HashMap<String, String> flairTextMap;
     private FlairManager flairManager;
     private EndpointEngine endpointEngine;
+    private Chat chat;
+    private Permission perm;
 
     // throws IllegalStateException if RedditClient isn't a mod on the subredditManager in the config,
     // IllegalStateException if flair mode in config doesn't exist (must be one of prefixsync, groups)
     // ApiException if subreddit in config doesn't exist / inaccessible
-    public SubredditManager(EndpointEngine endpointEngine) throws IllegalArgumentException, IllegalStateException, ApiException {
+    public SubredditManager(EndpointEngine endpointEngine, Chat chat, Permission perm) throws IllegalArgumentException, IllegalStateException, ApiException {
         this.subredditConfigSection = Config.getSection("subreddit");
         this.endpointEngine = endpointEngine;
+        this.chat = chat;
+        this.perm = perm;
         String subredditName = subredditConfigSection.getString("name");
         subredditReference = Reddit.getSubreddit(subredditName);
         if (subredditReference.about().isUserModerator()) {
@@ -79,5 +85,13 @@ public class SubredditManager {
 
     public EndpointEngine getEndpointEngine() {
         return endpointEngine;
+    }
+
+    public Chat getChat() {
+        return chat;
+    }
+
+    public Permission getPerm() {
+        return perm;
     }
 }

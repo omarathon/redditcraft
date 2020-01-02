@@ -1,5 +1,5 @@
 name: RedditCraft
-version: 1.4.3
+version: 1.5
 main: dev.omarathon.redditcraft.RedditCraft
 api-version: 1.13
 authors: [omarathon]
@@ -18,6 +18,7 @@ commands:
 
 depend:
   - RedditAPI
+  - Vault
 
 softdepend: [PlaceholderAPI]
 

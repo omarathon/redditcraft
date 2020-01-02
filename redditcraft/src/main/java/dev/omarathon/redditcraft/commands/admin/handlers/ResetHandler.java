@@ -1,6 +1,5 @@
 package dev.omarathon.redditcraft.commands.admin.handlers;
 
-import com.google.common.cache.RemovalCause;
 import dev.omarathon.redditcraft.commands.admin.AdminSelector;
 import dev.omarathon.redditcraft.commands.admin.flair.handlers.RemoveHandler;
 import dev.omarathon.redditcraft.commands.handler.Handler;

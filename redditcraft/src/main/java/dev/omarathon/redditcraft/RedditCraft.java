@@ -17,7 +17,10 @@ import dev.omarathon.redditcraft.reddit.Reddit;
 import dev.omarathon.redditcraft.subreddit.SubredditManager;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.RedditClient;
+import net.milkbowl.vault.chat.Chat;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.SQLException;
@@ -29,6 +32,8 @@ public final class RedditCraft extends JavaPlugin {
     private SubredditManager subredditManager;
     private EndpointEngine endpointEngine;
 
+    private static Permission perms = null;
+    private static Chat chat = null;
     private SQL sql;
 
     public RedditCraft() {
@@ -65,9 +70,11 @@ public final class RedditCraft extends JavaPlugin {
     public void load() {
         getLogger().info("Loading RedditCraft...");
 
-        saveDefaultConfig();
-
+        getConfig().options().copyDefaults(true);
+        saveConfig();
         Config.loadConfig();
+
+        Reddit.setLogging(Config.getConfig().getBoolean("verbose"));
 
         // setup SQL
         try {
@@ -77,6 +84,13 @@ public final class RedditCraft extends JavaPlugin {
         catch (SQLException e) {
             getLogger().severe("[FATAL] Error in connecting MySQL!");
             e.printStackTrace();
+            setEnabled(false);
+            return;
+        }
+
+        // load vault
+        if (!loadVault()) {
+            getLogger().severe("[FATAL] Error in setting up Vault!");
             setEnabled(false);
             return;
         }
@@ -97,7 +111,7 @@ public final class RedditCraft extends JavaPlugin {
         }
 
         try {
-            subredditManager = new SubredditManager(endpointEngine);
+            subredditManager = new SubredditManager(endpointEngine, chat, perms);
         }
         catch (IllegalArgumentException | IllegalStateException | ApiException e) {
             getLogger().severe("[FATAL] Error in setting up SubredditManager!");
@@ -115,6 +129,24 @@ public final class RedditCraft extends JavaPlugin {
         getCommand("reddit").setExecutor(new RedditCommandExecutor(endpointEngine));
 
         getLogger().info("[SUCCESS] Successfully started RedditCraft!");
+    }
+
+    private boolean loadVault() {
+        if (!setupPermissions()) return false;
+        if (!setupChat()) return false;
+        return true;
+    }
+
+    private boolean setupPermissions() {
+        RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+        perms = rsp.getProvider();
+        return perms != null;
+    }
+
+    private boolean setupChat() {
+        RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
+        chat = rsp.getProvider();
+        return chat != null;
     }
 
     private void setupDB() {
@@ -164,5 +196,13 @@ public final class RedditCraft extends JavaPlugin {
 
     public EndpointEngine getEndpointEngine() {
         return endpointEngine;
+    }
+
+    public static Permission getPermissions() {
+        return perms;
+    }
+
+    public static Chat getChat() {
+        return chat;
     }
 }

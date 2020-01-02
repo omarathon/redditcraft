@@ -18,6 +18,7 @@ commands:
 
 depend:
   - RedditAPI
+  - Vault
 
 softdepend: [PlaceholderAPI]
 

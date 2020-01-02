@@ -1,6 +1,5 @@
 package dev.omarathon.redditcraft.auth.verifier;
 
-import dev.omarathon.redditcraft.commands.admin.flair.FlairSelector;
 import dev.omarathon.redditcraft.data.EndpointEngine;
 import dev.omarathon.redditcraft.data.endpoints.FlairStatus;
 import dev.omarathon.redditcraft.helper.Config;
