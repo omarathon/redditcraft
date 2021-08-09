@@ -8,6 +8,13 @@ RedditCraft Minecraft Server plugin source code.
 
 -------
 
+Plugin dependencies:
+
+* omarathon/reddit-api: https://github.com/omarathon/reddit-api
+* omarathon/ambient-messenger: https://github.com/omarathon/ambient-messenger
+
+-------
+
 RedditCraft is a Minecraft Server plugin that integrates your presence on a Minecraft server to a server-wide subreddit.
 
 It's essentially a Minecraft Server forum alternative.
