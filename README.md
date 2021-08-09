@@ -8,7 +8,7 @@ RedditCraft Minecraft Server plugin source code.
 
 -------
 
-Plugin dependencies:
+**Plugin dependencies:**
 
 * omarathon/reddit-api: https://github.com/omarathon/reddit-api
 * omarathon/ambient-messenger: https://github.com/omarathon/ambient-messenger
