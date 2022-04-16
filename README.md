@@ -24,5 +24,3 @@ A Minecraft player may authenticate their Reddit account, and transfer their pre
 **LICENSE**
 
 While the source code for RedditCraft is licensed under GPL and is free to build yourself, you are not permitted to re-distribute the software in any way, nor harness the code in any way beyond viewing without an appropriate Copyright linking to this repository and the owner (Omar Tanner).
-<!-- 
-This is a paid product, and as a result the user is expected to pay Omar Tanner for the effort put into building this plugin and to support them maintaining it. -->
